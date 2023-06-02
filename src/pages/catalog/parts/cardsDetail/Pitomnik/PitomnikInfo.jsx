@@ -60,7 +60,7 @@ const PitomnikInfo = ({ listing, setOpenReserve, setReservAnimal }) => {
 
 
           return (
-            <div key={index} className="pitomnik-breed-item col-6 col-xs-12">
+            <div key={index} className="pitomnik-breed-item col-6 col-sm-12 col-xs-12">
               <div className="pitomnik-breed-item-roof">
                 <span className='pitomnik-breed-gender'>{gender}:</span>
                 <div className='pitomnik-breed-name'>
