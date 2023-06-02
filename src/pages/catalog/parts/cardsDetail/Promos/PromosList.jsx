@@ -46,7 +46,7 @@ const Promos = ({ idEl }) => {
 
             {
               listings.map((item) => (
-                <div key={item.id} className="col-3 col-sm-12 col-xs-12">
+                <div key={item.id} className="col-3 col-sm-6 col-xs-12">
                   <PromosItem
                     listing={item}
                     key={item.id}
