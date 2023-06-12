@@ -7,7 +7,7 @@ import RewRatingItem from 'pages/catalog/parts/CardsRatingItem';
 const CardsItem = ({ listing }) => {
 
 
-  const imgCards = listing.cards_photos ? listing.cards_photos[0].name : stubImg;
+  const imgCards = listing.cards_photos ? listing?.cards_photos[0]?.name : stubImg;
 
 
 
@@ -24,7 +24,7 @@ const CardsItem = ({ listing }) => {
           <RewRatingItem idEl={listing.id} />
         </Link>
         <div className="cards-item-info">
-          <h3><Link to={`/pitomniki/${listing.id}`}>{listing.card_name}</Link></h3>
+          <h3><Link to={`/pitomniki/${listing.id}`}>{listing?.card_name}</Link></h3>
           {listing.cards_description_mini && (<div className="cards-item-text">{listing.cards_description_mini}</div>)}
 
           {listing.cards_coords && (

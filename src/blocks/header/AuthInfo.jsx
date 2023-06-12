@@ -17,11 +17,11 @@ const AuthInfo = ({ ActionFn, uid, accountInfo, checkingStatus }) => {
     onAuthStateChanged(auth, (user) => {
       if (user) {
         getSingleListing('users', auth.currentUser.uid).then(res => {
-          // WpAuth().then(answ => {
-          //   // console.log(answ.token)
-          //   ActionFn('SET_INFO_ACCOUNT', { ...res, token: answ.token, checkingStatus: false });
-          // });
-          ActionFn('SET_INFO_ACCOUNT', { ...res, checkingStatus: false });
+          WpAuth().then(answ => {
+            //   // console.log(answ.token)
+            ActionFn('SET_INFO_ACCOUNT', { ...res, token: answ.token, checkingStatus: false });
+          });
+          // ActionFn('SET_INFO_ACCOUNT', { ...res, checkingStatus: false });
         });
 
 
