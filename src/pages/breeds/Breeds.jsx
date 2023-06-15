@@ -8,7 +8,7 @@ import Breadcrumbs from 'pages/parts/Breadcrumbs';
 import EmptyList from 'pages/cabinet/parts/EmptyList';
 const Breeds = () => {
 
-  const siteWp = 'http://zoo-base.sait.website/';
+  const siteWp = 'https://zoo-base.sait.website/';
 
   const params = useParams();
   const location = useLocation();

@@ -33,7 +33,7 @@ const Reviews = ({
 
 
 
-  const siteWp = 'http://zoo-base.sait.website/';
+  const siteWp = 'https://zoo-base.sait.website/';
 
   const [loading, setLoading] = useState(true);
   const [listings, setListings] = useState(null);

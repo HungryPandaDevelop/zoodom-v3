@@ -101,13 +101,30 @@ const Catalog = ({
     <>
       <div className="stub"></div>
 
-      <Meta
-        typeMeta='default'
-        title='Все питомники на сервисе Зооника'
-        description='Все питомники на сервисе Зооника'
-        keywords='Все питомники на сервисе Зооника'
+      {/*params.catagoryName === 'sobak' ? (
+        <Meta
+          typeMeta='default'
+          title='Породы собак с фото названием и описанием по алфавиту 600+'
+          description='Все породы собак с фотографиями и описанием характера. Каталог собак, который вам поможет выбрать какую собаку завести.'
+          keywords='собаки породы все псы каталог фото корм вязка питание дрессировка собачек псов библиотека по алфавиту выбор порода щенки'
+          ogtype='article'
+          metah1='Все породы собак по алфавиту'
+          metah2_1='Назначение'
+          metah2_2='Размер'
+          metah2_3='Содержание'
+          metah3_1='Страна'
+          metah3_2='Быстрый поиск породы'
+        />
+      ) : (
+        <Meta
+          typeMeta='default'
+          title='Все питомники на сервисе Зооника'
+          description='Все питомники на сервисе Зооника'
+          keywords='Все питомники на сервисе Зооника'
 
-      />
+        />
+      )*/}
+
       <Breadcrumbs titleCategory={titleCategory} listingType={params.catagoryName} />
 
       <CatalogChange

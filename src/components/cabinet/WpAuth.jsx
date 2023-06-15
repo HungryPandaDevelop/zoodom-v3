@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const siteWp = 'http://zoo-base.sait.website/';
+const siteWp = 'https://zoo-base.sait.website/';
 
 const loginData = {
   username: 'redactor',

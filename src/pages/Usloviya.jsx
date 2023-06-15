@@ -6,7 +6,7 @@ const Page = () => {
 
   const [listings, setListings] = useState('');
   const [loading, setLoading] = useState(true);
-
+  const siteWp = 'https://zoo-base.sait.website/';
   useEffect(() => {
 
     // console.log('param', paramsUrl.get("keep"))
@@ -25,7 +25,7 @@ const Page = () => {
   }, []);
 
 
-  const siteWp = 'http://zoo-base.sait.website/';
+
   return (
     <div>
       <div className='content'>

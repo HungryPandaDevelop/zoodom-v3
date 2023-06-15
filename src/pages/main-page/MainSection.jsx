@@ -12,7 +12,7 @@ const MainSection = () => {
   const [loading, setLoading] = useState(true);
 
 
-  const siteWp = 'http://zoo-base.sait.website/';
+  const siteWp = 'https://zoo-base.sait.website/';
 
   useEffect(() => {
     // console.log('param', paramsUrl.get("keep"))

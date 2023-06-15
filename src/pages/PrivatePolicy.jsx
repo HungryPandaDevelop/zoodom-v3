@@ -25,7 +25,7 @@ const Page = () => {
   }, []);
 
 
-  const siteWp = 'http://zoo-base.sait.website/';
+  const siteWp = 'https://zoo-base.sait.website/';
   return (
     <div>
       <div className='content'>

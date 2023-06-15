@@ -41,8 +41,8 @@ const PageNav = ({ breedsCategory }) => {
         <li><span data-index="point-3.2" onClick={(e) => movePage(e)}>2.2 Морда  </span></li>
         <li><span data-index="point-3.3" onClick={(e) => movePage(e)}>2.3 Зубы </span></li>
         <li><span data-index="point-3.4" onClick={(e) => movePage(e)}>2.4 Уши  </span></li>
-        <li><span data-index="point-4.5" onClick={(e) => movePage(e)}>2.5 Глаза  </span></li>
-        <li><span data-index="point-5.6" onClick={(e) => movePage(e)}>2.6 Туловище </span></li>
+        <li><span data-index="point-3.5" onClick={(e) => movePage(e)}>2.5 Глаза  </span></li>
+        <li><span data-index="point-3.6" onClick={(e) => movePage(e)}>2.6 Туловище </span></li>
         <li><span data-index="point-3.7" onClick={(e) => movePage(e)}>2.7 Лапы </span></li>
         <li><span data-index="point-3.8" onClick={(e) => movePage(e)}>2.8 Шерсть</span></li>
         <li><span data-index="point-3.9" onClick={(e) => movePage(e)}>2.9 Окрас</span></li>

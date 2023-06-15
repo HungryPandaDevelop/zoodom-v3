@@ -26,7 +26,7 @@ const HomeNurseries = () => {
         <h2 className="title-section">
           Объявления</h2><Link className="back-link" to="/ads">Все Объявления</Link>
       </div>
-      <div className='main-grid'>
+      <div className='catalog-grid'>
         {loading ? 'Loading' : listings &&
           listings.map((item) => (
             <div key={item.id} className="nurse-wrap-item col-3 col-lg-4 col-md-6 col-xs-12">

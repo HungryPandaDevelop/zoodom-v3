@@ -12,7 +12,7 @@ const MainPage = () => {
 
   return (
     <>
-      <Helmet>
+      {/* <Helmet>
         <title>Федеральный Российский портал о домашних животных Zoonika</title>
         <meta name="description" content="Сайт о животных Zoonika.com создан для владельцев питомников, ветеринарных клиник и любителей кошек и собак. Здесь можно купить или получить в дар кошку или собаку любой породы." />
         <meta name="keywords" content="сайт портал ресурс о животных кошках собаках породы объявления продажа питомники" />
@@ -20,7 +20,7 @@ const MainPage = () => {
         <meta property="og:title" content="Федеральный Российский портал о домашних животных Zoonika" />
         <meta property="og:description" content="Сайт о животных Zoonika.com создан для владельцев питомников, ветеринарных клиник и любителей кошек и собак. Здесь можно купить или получить в дар кошку или собаку любой породы." />
 
-      </Helmet>
+      </Helmet> */}
       <MainSection />
       <HomeNurseries />
       <HomePromo

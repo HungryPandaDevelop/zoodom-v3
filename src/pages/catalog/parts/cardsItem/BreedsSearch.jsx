@@ -36,7 +36,7 @@ const BreedsSearch = ({
     setLoading(true);
 
 
-    const siteWp = 'http://zoo-base.sait.website/';
+    const siteWp = 'https://zoo-base.sait.website/';
 
     axios.get(`${siteWp}/wp-json/breeds/list?category=${valueSelect.value}`).then(res => {
 

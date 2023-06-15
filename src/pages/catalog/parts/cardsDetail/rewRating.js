@@ -8,7 +8,7 @@ export const rewRating = async (idEl) => {
   let allRews = [];
   let totalGrade = 0;
 
-    const siteWp = 'http://zoo-base.sait.website/';
+    const siteWp = 'https://zoo-base.sait.website/';
     try {
 
     await axios.get(`${siteWp}/wp-json/comments/list?listingRef=${idEl}`).then(res => {

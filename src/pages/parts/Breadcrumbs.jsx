@@ -13,12 +13,12 @@ const categoryById = {
 
 
 
-const DynamicUserBreadcrumb = ({ match }) => {
-  // console.log('m', match)
-  return (
-    <span>{categoryById[match.params.catagoryName]}</span>
-  )
-};
+// const DynamicUserBreadcrumb = ({ match }) => {
+//   // console.log('m', match)
+//   return (
+//     <>{categoryById[match.params.catagoryName]}</>
+//   )
+// };
 
 // const CustomPropsBreadcrumb = ({ someProp }) => <span>{someProp}</span>;
 

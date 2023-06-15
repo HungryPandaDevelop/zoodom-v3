@@ -18,7 +18,7 @@ import { currentNameCategory } from 'pages/catalog/parts/cardsDetail/Pitomnik/cu
 
 const Breeds = () => {
 
-  const siteWp = 'http://zoo-base.sait.website/';
+  const siteWp = 'https://zoo-base.sait.website/';
 
   const [listings, setListings] = useState([]);
   const [loading, setLoading] = useState(true);
