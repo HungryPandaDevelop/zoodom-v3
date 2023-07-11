@@ -14,6 +14,7 @@ import Demo from 'pages/Demo';
 import Search from 'pages/Search';
 
 import Breeds from 'pages/breeds/Breeds';
+
 import BreedsDetail from 'pages/breeds/BreedsDetail';
 
 import Promos from 'pages/promo/Promos';
@@ -25,12 +26,6 @@ import Contacts from 'pages/Contacts';
 
 import NotFound from 'pages/NotFound';
 
-import Chat from 'pages/cabinet/chat/Chat';
-// import ChatList from 'pages/cabinet/chat/ChatList';
-
-import Videochat from 'pages/cabinet/videochat/Videochat';
-import VideoRoomIn from 'pages/cabinet/videochat/VideoRoomIn';
-import VideoRoomOut from 'pages/cabinet/videochat/VideoRoomOut';
 
 
 
@@ -48,9 +43,6 @@ import AccountEdit from 'pages/cabinet/account/AccountEdit';
 import Cards from 'pages/cabinet/cards/Cards';
 import CardsNew from 'pages/cabinet/cards/CardsNew';
 import CardsEdit from 'pages/cabinet/cards/CardsEdit';
-
-import Liked from 'pages/cabinet/liked/Liked';
-import Hidden from 'pages/cabinet/hidden/Hidden';
 
 // Страницы Елементов Вакансии\ Резюме
 import Catalog from 'pages/catalog/Catalog';
@@ -86,8 +78,11 @@ const App = () => {
         <Routes> 
           <Route path='/' exept element={<MainPage/>} ></Route>
           <Route path='/demo' element={<Demo/>} ></Route>
+
           <Route path='/porodi-:breedsCategory/' element={<Breeds/>} ></Route>
+   
           <Route path='/porodi-:breedsCategory/:breedsID.html' element={<BreedsDetail/>} ></Route>
+
           <Route path='/search' element={<Search/>} ></Route>
           <Route path='/contacts' element={<Contacts/>} ></Route>
           <Route path='/rule-public' element={<RulePublic/>} ></Route>
@@ -106,19 +101,6 @@ const App = () => {
               <Route path='/cabinet/account/'  element={<Account/>}></Route>
     
               <Route path='/cabinet/account-edit/' element={<AccountEdit/>}></Route>
-
-              {/* <Route path='/cabinet/liked/' element={<Liked/>}></Route>
-              <Route path='/cabinet/hidden/' element={<Hidden/>}></Route>
- */}
-
-              {/* <Route path='/cabinet/chat/'  element={<Chat/>} ></Route>
-              <Route path='/cabinet/chat/:roomUrl'  element={<Chat/>} ></Route>
-
-              <Route path='/cabinet/videochat/'  element={<Videochat/>} ></Route>
-              <Route path='/cabinet/videochat/videoroom-out/:userId'  element={<VideoRoomOut/>} ></Route>
-              <Route path='/cabinet/videochat/videoroom-in/:roomUrl'  element={<VideoRoomIn/>} ></Route>
- */}
-
 
               <Route path='/cabinet/:rubricId' element={<Cards/>}></Route>
               <Route path='/cabinet/:rubricId-new' element={<CardsNew/>}></Route>
@@ -144,8 +126,6 @@ const App = () => {
           <Route path='/catalog/:catagoryName/:elementId' element={<CardsDetail/>}></Route>
 
           <Route path="/404" element={ <NotFound /> } />
-          {/* <Route path="*" element={ <Navigate to="/404" replace />} /> */}
-
 
         </Routes>
 

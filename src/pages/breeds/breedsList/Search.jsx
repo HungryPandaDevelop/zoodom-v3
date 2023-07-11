@@ -2,15 +2,24 @@ import { useState, useEffect } from 'react';
 import PreloaderList from 'pages/cabinet/parts/PreloaderList';
 import { Link } from 'react-router-dom';
 
-const Search = ({ setGetSearchVal, getSerchVal, breedsCategory }) => {
+import { inputLoadList } from 'pages/breeds/breedsList/allGenerateUrl';
 
-  // const [searchVal, setSearchVal] = useState('');
+const Search = ({
+  breedsCategory,
+  searchParams,
+  setSearchParams,
+  setParamsUrlGenerate }) => {
+
+  const [searchVal, setSearchVal] = useState('');
 
   const [showPreloader, setShowPreloader] = useState(false);
   const [showEmpty, setShowEmpty] = useState(false);
 
-  const checkEmty = () => {
-    if (getSerchVal.length > 0) {
+  const [firstLoad, setFirstLoad] = useState(0);
+
+  const checkEmty = (val) => {
+    console.log(searchVal)
+    if (val.length > 0) {
       setShowEmpty(true);
     } else {
       setShowEmpty(false);
@@ -18,33 +27,38 @@ const Search = ({ setGetSearchVal, getSerchVal, breedsCategory }) => {
   }
 
   const onSearch = (e) => {
-    checkEmty();
-    setGetSearchVal(e.target.value)
-    // setGetSearchVal(e.target.value)
-  }
 
-  const onClearSearch = () => {
-    setGetSearchVal('');
-
-  }
-
+    setSearchVal(e.target.value);
+    checkEmty(e.target.value);
+  };
 
   useEffect(() => {
 
-    setShowPreloader(true);
-    let idStartSearch = setTimeout(() => {
+    if (searchParams.get('search').length > 0 && firstLoad === 0) {
+      setFirstLoad(1);
+      setSearchVal(searchParams.get('search'));
+    }
 
+    let searchId = setTimeout(() => {
       setShowPreloader(false)
-      setGetSearchVal(getSerchVal);
 
-      checkEmty();
+      inputLoadList(searchParams, setSearchParams, setParamsUrlGenerate, searchVal, 'search');
 
-    }, 1500);
-    // setSearchVal(startValue)
-    return (() => {
-      clearTimeout(idStartSearch);
-    })
-  }, [getSerchVal]);
+    }, 1000);
+
+    return () => {
+      setShowPreloader(true);
+      clearTimeout(searchId);
+    }
+  }, [searchVal])
+
+
+  const onClearSearch = () => {
+    setShowEmpty(false);
+    setSearchVal('');
+    setSearchParams('');
+    setParamsUrlGenerate('');
+  }
 
   return (
     <div className="main-full">
@@ -52,9 +66,9 @@ const Search = ({ setGetSearchVal, getSerchVal, breedsCategory }) => {
         <input
           type="text"
           id="search"
-          className={`input-search input-decorate ${getSerchVal.length > 0 ? 'input-empty' : ''}`}
+          className={`input-search input-decorate ${searchVal.length > 0 ? 'input-empty' : ''}`}
           onChange={(e) => { onSearch(e) }}
-          value={getSerchVal}
+          value={searchVal}
 
         />
         <label htmlFor="search">Быстрый поиск породы</label>
@@ -66,6 +80,7 @@ const Search = ({ setGetSearchVal, getSerchVal, breedsCategory }) => {
           </Link>
           :
           <i className="search-ico"></i>}
+
         <div className="input-search-hint">
           {breedsCategory === 'sobak' ? (<div>Более 400 пород собак с подробным описанием и характеристиками</div>) : (<div>Более 60 пород кошек с подробным описанием и характеристиками</div>)}
 

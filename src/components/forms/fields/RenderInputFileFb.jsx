@@ -12,7 +12,7 @@ import storeImage from 'hooks/storeImage';
 
 
 const TemplateFile = (props) => {
-  const siteWp = 'http://zoo-base.sait.website/';
+  const siteWp = 'https://zoo-base.sait.website/';
   const storage = getStorage();
   const elRef = useRef();
 

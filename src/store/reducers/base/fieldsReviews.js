@@ -21,22 +21,25 @@ export default function(){
     dignity: { 
       name: "dignity", 
       label: "Достоинства", 
-      type:"textarea",
+      type:"text",
       wrapClass: "form-line col-12 input-animate-label",
       validate: ['required', 'minLength'],
+      numBool: true
     },
     limitations: { 
       name: "limitations", 
       label: "Недостатки", 
-      type:"textarea",
+      type:"text",
       wrapClass: "form-line col-12 input-animate-label",
+      numBool: true
 
     },
     reviews: { 
       name: "reviews", 
       label: "Дополнительные комментарии", 
-      type:"textarea",
+      type:"text",
       wrapClass: "form-line col-12 input-animate-label",
+      numBool: true
     },
     statusName: { 
       name: "statusName", 

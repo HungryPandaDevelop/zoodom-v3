@@ -6,8 +6,7 @@ const TemplateInputRadio = ({ name, label, labelSecond, options, input, num, cla
 
   return (
     <div className={className}>
-      {num && <i className="num-offset">{num}</i>}
-      {label && <label><b>{label}</b> {labelSecond ? <span>{labelSecond}</span> : ''}</label>}
+      {label && <label><b>{num}. {label}</b> {labelSecond ? <span>{labelSecond}</span> : ''}</label>}
       <div className="checkbox-container">
         {options.map((item, index) => (
           <div className='checkbox' key={index}>
@@ -42,9 +41,13 @@ const RenderInputRadio = ({
   hideByClickId
 }) => {
 
-  if (hideByClickId && !inputValueConnect) { return false }
-  else if (inputValueConnect.length > 0 && hideByClickId.indexOf(inputValueConnect) === -1) {
-    return false;
+  if (hideByClickId) {
+    if (!inputValueConnect) {
+      return false
+    }
+    else if (inputValueConnect.length > 0 && hideByClickId.indexOf(inputValueConnect) === -1) {
+      return false;
+    }
   }
   return <Field
     name={name}

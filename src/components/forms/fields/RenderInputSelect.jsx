@@ -100,8 +100,8 @@ const TemplateSelect = (props) => {
   }
   return (
     <div className={className}>
-      {num && <i className="num-offset">{num}</i>}
-      {label && (<label><b>{label}</b> <span>{labelSecond}</span></label>)}
+
+      {label && (<label><b>{num}. {label}</b> <span>{labelSecond}</span></label>)}
       <div
         ref={selectRef}
         className={`custom-select ${open ? 'active' : ''}`}

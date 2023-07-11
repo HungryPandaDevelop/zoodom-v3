@@ -38,9 +38,6 @@ const TempateInputText = (props) => {
 const RenderInputPhone = ({ name, placeholder, label, labelSecond, className, num }) => {
   return (
     <div className={className}>
-      {num && <i className="num-offset">{num}</i>}
-
-
       <Field
         name={name}
         type="tel"
@@ -50,7 +47,7 @@ const RenderInputPhone = ({ name, placeholder, label, labelSecond, className, nu
       // {...phoneMask}
 
       />
-      {label && (<label htmlFor={name}><b>{label}</b> {labelSecond ? <span>{labelSecond}</span> : ''}</label>)}
+      {label && (<label htmlFor={name}><b>{num}. {label}</b> {labelSecond ? <span>{labelSecond}</span> : ''}</label>)}
     </div>
   );
 }

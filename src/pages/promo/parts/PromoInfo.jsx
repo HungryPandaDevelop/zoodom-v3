@@ -16,9 +16,25 @@ const CompanyInfo = ({ listing }) => {
   }, []);
 
 
+  let ruTextPromo;
+
+  if (listing.typePromo === 'sale') {
+    ruTextPromo = 'Продажа';
+  }
+  if (listing.typePromo === 'anons') {
+    ruTextPromo = 'Анонс помета';
+  }
+  if (listing.typePromo === 'knit') {
+    ruTextPromo = 'Вязка';
+  }
+  if (listing.typePromo === 'gift') {
+    ruTextPromo = 'В дар';
+  }
+
   return (
     <>
       <div className="promo-info">
+        <div className={`promo-item-type ${listing.typePromo}`}>{ruTextPromo}</div>
         <ul className="promo-info-list ln">
           {listing.binding && (
             <li>
@@ -105,7 +121,7 @@ const CompanyInfo = ({ listing }) => {
         </ul>
         <div className="promo-info-footer">
           <div className="promo-price">
-
+            <b>Цена:</b>
             {listing.typePromo === 'knit' ?
               listing.price_knit
               :

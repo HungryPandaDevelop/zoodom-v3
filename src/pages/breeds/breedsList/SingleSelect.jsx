@@ -1,13 +1,23 @@
 import { useState, useEffect, useRef } from 'react';
 
+import { inputLoadList } from 'pages/breeds/breedsList/allGenerateUrl';
 
 
-const SingleSelect = ({ topic, options, className, searchValSelect, setSearchValSelect, idSelect, startName }) => {
+const SingleSelect = ({ topic,
+  options,
+  className,
+  idSelect,
+  searchParams,
+  setSearchParams,
+  setParamsUrlGenerate
+}) => {
   const [open, setOpen] = useState(false);
   const [select, setSelect] = useState('Все');
 
   const elRef = useRef(null);
   const elRefId = useRef();
+
+  const [firstLoad, setFirstLoad] = useState(0);
 
   useEffect(() => {
 
@@ -17,13 +27,15 @@ const SingleSelect = ({ topic, options, className, searchValSelect, setSearchVal
       objToArr.push({ label: options[key], value: key })
     };
 
-    objToArr.map((item) => {
-      if (item.value === startName) {
-        startName && setSelect(item.label);
-      };
-    });
+    if (searchParams.get(idSelect).length > 0 && firstLoad === 0) {
+      setFirstLoad(1);
+      objToArr.map((item) => {
+        if (item.value === searchParams.get(idSelect)) {
+          setSelect(item.label);
+        };
+      });
+    }
 
-    // console.log(startName, options, objToArr)
 
     const hideByBody = (e) => {
 
@@ -47,11 +59,11 @@ const SingleSelect = ({ topic, options, className, searchValSelect, setSearchVal
     setSelect(value.label);
 
     if (value.label === 'Все') {
-      setSearchValSelect({ ...searchValSelect, [elRefId.current.dataset.id]: '' });
+      setParamsUrlGenerate('');
+      setSearchParams('');
     }
     else {
-      setSearchValSelect({ ...searchValSelect, [elRefId.current.dataset.id]: value.value });
-      console.log(searchValSelect)
+      inputLoadList(searchParams, setSearchParams, setParamsUrlGenerate, value.value, idSelect);
     }
 
   }

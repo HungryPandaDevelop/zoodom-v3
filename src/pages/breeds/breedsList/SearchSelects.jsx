@@ -1,18 +1,13 @@
 import SingleSelect from 'pages/breeds/breedsList/SingleSelect';
 
 const SearchSelects = ({
-  fieldPurpose,
-  fieldSize,
-  fieldKeep,
-  fieldСountry,
-  fieldСountryCats,
-  searchValSelect,
-  setSearchValSelect,
-  startSelect,
-  breedsCategory
+  loadListFields,
+  breedsCategory,
+  searchParams,
+  setSearchParams,
+  setParamsUrlGenerate
 }) => {
 
-  // console.log(fieldPurpose)
 
   return (
     <div className='main-grid search-selects'>
@@ -20,43 +15,53 @@ const SearchSelects = ({
       {breedsCategory !== 'koshki' && (
         <SingleSelect
           topic='Назначение'
-          options={fieldPurpose}
+          options={loadListFields.field_purpose.choices}
           idSelect='purpose'
           className='col-3 col-xs-12'
-          searchValSelect={searchValSelect}
-          setSearchValSelect={setSearchValSelect}
-          startName={startSelect.purpose}
+          searchParams={searchParams}
+          setSearchParams={setSearchParams}
+          setParamsUrlGenerate={setParamsUrlGenerate}
         />)}
+      {breedsCategory === 'koshki' ? (
+        <SingleSelect
+          topic='Линька'
+          options={loadListFields.field_linka.choices}
+          idSelect='linka'
+          className={breedsCategory === 'koshki' ? 'col-6 col-xs-12' : 'col-3 col-xs-12'}
+          searchParams={searchParams}
+          setSearchParams={setSearchParams}
+          setParamsUrlGenerate={setParamsUrlGenerate}
 
-      <SingleSelect
-        topic='Размер'
-        options={fieldSize}
-        idSelect='size'
-        className={breedsCategory === 'koshki' ? 'col-6 col-xs-12' : 'col-3 col-xs-12'}
-        searchValSelect={searchValSelect}
-        setSearchValSelect={setSearchValSelect}
-        startName={startSelect.size}
-      />
+        />) : (<SingleSelect
+          topic='Размер'
+          options={loadListFields.field_size.choices}
+          idSelect='size'
+          className={breedsCategory === 'koshki' ? 'col-6 col-xs-12' : 'col-3 col-xs-12'}
+          searchParams={searchParams}
+          setSearchParams={setSearchParams}
+          setParamsUrlGenerate={setParamsUrlGenerate}
+
+        />)}
       {breedsCategory !== 'koshki' && (
         <SingleSelect
           topic='Содержание'
-          options={fieldKeep}
+          options={loadListFields.field_keep.choices}
           idSelect='keep'
           className='col-3 col-xs-12'
-          searchValSelect={searchValSelect}
-          setSearchValSelect={setSearchValSelect}
-          startName={startSelect.keep}
+          searchParams={searchParams}
+          setSearchParams={setSearchParams}
+          setParamsUrlGenerate={setParamsUrlGenerate}
         />
       )}
 
       <SingleSelect
         topic='Страна'
-        options={breedsCategory === 'koshki' ? fieldСountryCats : fieldСountry}
+        options={breedsCategory === 'koshki' ? loadListFields.field_country_cats.choices : loadListFields.field_country.choices}
         className={breedsCategory === 'koshki' ? 'col-6 col-xs-12' : 'col-3 col-xs-12'}
         idSelect='country'
-        searchValSelect={searchValSelect}
-        setSearchValSelect={setSearchValSelect}
-        startName={startSelect.country}
+        searchParams={searchParams}
+        setSearchParams={setSearchParams}
+        setParamsUrlGenerate={setParamsUrlGenerate}
 
       />
     </div>

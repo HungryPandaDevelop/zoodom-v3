@@ -121,9 +121,9 @@ const TempateInput = (props) => {
         />
       </div>
 
-      <div className="col-6 search-field ">
+      <div className="col-6 custom-select">
         <div
-          className="search-name"
+          className="custom-select-name"
           onClick={() => { setCityPopupState(true) }}
         >
           {loading ? 'Loading...' : breedsName}
@@ -148,7 +148,7 @@ const TempateInput = (props) => {
             <h3>Родители - производители</h3>
           </div>
 
-          <div className="col-12">
+          <div className="col-4">
             <RenderInputSelect
               name={`${nameMain}.gender`}
               placeholder={'Пол'}
@@ -156,18 +156,18 @@ const TempateInput = (props) => {
                 { label: "Мама", value: "w" },
                 { label: "Папа", value: "m" },
               ]}
-            // setOuterVal={setCurrentBreeds}
             />
           </div>
 
-          <div className="col-6">
+          <div className="col-8">
             <div className="breds-input-cabinet-item input-animate-label">
               <RenderInputText
                 obj={{ name: `${nameMain}.name`, label: 'Кличка' }}
               />
             </div>
           </div>
-          <div className="col-6">
+          <div className="col-4"></div>
+          <div className="col-8">
             <div className="breds-input-cabinet-item input-animate-label">
               <RenderInputDate
                 name={`${nameMain}.date_berth`}
@@ -175,14 +175,23 @@ const TempateInput = (props) => {
               />
             </div>
           </div>
-
+          <div className="col-12">
+            <div className="breds-input-cabinet-item">
+              <RenderInputTextarea
+                obj={{
+                  name: nameMain + '.opisaone',
+                  label: 'Описание',
+                  labelSecond: 'Длина текста не должна превышать 3000 символов, включая пробелы.'
+                }}
+              /></div>
+          </div>
           {currentAnimal?.value === 'sobak' && <SerfDog nameMain={nameMain} />}
           {currentAnimal?.value === 'koshki' && <SerfCat nameMain={nameMain} />}
 
 
 
           <div className="col-12">
-            <div className="breds-input-cabinet-item input-animate-label">
+            <div className="breds-input-cabinet-item">
               <RenderInputTextarea
                 obj={{
                   name: nameMain + '.diplomi',
@@ -192,7 +201,7 @@ const TempateInput = (props) => {
               /></div>
           </div>
           <div className="col-12">
-            <div className="breds-input-cabinet-item input-animate-label">
+            <div className="breds-input-cabinet-item">
               <RenderInputTextarea
                 obj={{
                   name: `${nameMain}.ychastie_vistavki`,
@@ -202,7 +211,7 @@ const TempateInput = (props) => {
               /></div>
           </div>
           <div className="col-12">
-            <div className="breds-input-cabinet-item input-animate-label">
+            <div className="breds-input-cabinet-item">
               <RenderInputTextarea
                 obj={{
                   name: `${nameMain}.tituli`,

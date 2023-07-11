@@ -29,7 +29,7 @@ const TemplateFile = (props) => {
     className
   } = props;
 
-  const siteWp = 'http://zoo-base.sait.website/';
+  const siteWp = 'https://zoo-base.sait.website/';
 
   const headers = {
     Authorization: "Bearer " + token,
@@ -127,8 +127,8 @@ const TemplateFile = (props) => {
   return (
     <div className={className}>
 
-      {num && <i className="num-offset">{num}</i>}
-      {label && <label><b>{label}</b>{labelSecond && <div className='hint-input-file'><i><span>{labelSecond}</span></i></div>}</label>}
+
+      {label && <label><b>{num ? (<>{num}. </>) : ''} {label}</b>{labelSecond && <div className='hint-input-file'><i><span>{labelSecond}</span></i></div>}</label>}
       {nameFile.length < 10 && (<div className={`dragdrop-container ${isDragActive ? 'dragged' : ''}`} {...getRootProps()}>
         <input {...getInputProps()} />
         {loadingFile === true ? <div className="preloader"></div> : (<span>Перетащите несколько файлов сюда или нажмите, чтобы выбрать файлы</span>)}

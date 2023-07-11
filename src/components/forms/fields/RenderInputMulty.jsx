@@ -79,8 +79,7 @@ const RenderInputMulty = (props) => {
     <div className={className}>
       <div className={`main-grid multy-input`}>
         <div className="col-12">
-          {num && <i className="num-offset">{num}</i>}
-          {label && <label ><b>{label}</b>{labelSecond && <div className='hint-input-file'><i><span>{labelSecond}</span></i></div>}</label>}
+          {label && <label ><b>{num}. {label}</b>{labelSecond && <div className='hint-input-file'><i><span>{labelSecond}</span></i></div>}</label>}
         </div>
         {renderFields}
       </div>

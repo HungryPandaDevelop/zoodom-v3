@@ -16,6 +16,7 @@ const TempateInputText = (props) => {
     checkErrorSubmit,
     setErrCheck,
     className,
+    numBool,
     meta: {
       error,
     }
@@ -44,7 +45,7 @@ const TempateInputText = (props) => {
 
   return (
     <div className={className}>
-      {<i className="num-offset">{num}</i>}
+
 
 
       <input
@@ -54,7 +55,7 @@ const TempateInputText = (props) => {
         className={`input-decorate ${checkErrorSubmit && error && 'input-error'} ${input.value.length > 0 ? 'input-empty' : ''} `}
 
       />
-      {label && <label htmlFor={input.name}><b>{label}</b>{labelSecond && <div className='hint-input-file'><i><span>{labelSecond}</span></i></div>}</label>}
+      {label && <label htmlFor={input.name}><b>{!numBool ? (<>{num}. </>) : ''}{label}</b>{labelSecond && <div className='hint-input-file'><i><span>{labelSecond}</span></i></div>}</label>}
       {(checkErrorSubmit && (error && <span className='input-error-text'>{error}</span>))}
     </div>
   );
@@ -77,6 +78,7 @@ const RenderInputText = ({
     label,
     labelSecond,
     wrapClass,
+    numBool,
     hideByClickId
   } = obj;
 
@@ -103,6 +105,7 @@ const RenderInputText = ({
     className={wrapClass}
     component={TempateInputText}
     num={num}
+    numBool={numBool}
     validate={validateArr}
     checkErrorSubmit={checkErrorSubmit}
     setErrCheck={setErrCheck}

@@ -26,6 +26,7 @@ const TemplateCoords = (props) => {
     if (firstLoad === 0) {
       setFirstLoad(1);
       const { ymaps } = window;
+      console.log('window', window)
       const suggest = new ymaps.SuggestView('coords-ya');
 
       suggest.events.add('select', (e) => {
@@ -60,7 +61,6 @@ const TemplateCoords = (props) => {
   return (
     <div className={className}>
       <div className='map-input'>
-        {num && <i className="num-offset">{num}</i>}
 
         <input
 
@@ -72,7 +72,7 @@ const TemplateCoords = (props) => {
           ref={elRef}
 
         />
-        {label && <label htmlFor='coords-ya' className="col-12"><b>{label}</b><span>{labelSecond}</span></label>}
+        {label && <label htmlFor='coords-ya' className="col-12"><b>{num}. {label}</b><span>{labelSecond}</span></label>}
         {/* путышка для отправки */}
         <input
           type="text"

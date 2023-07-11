@@ -292,7 +292,7 @@ export default function(){
       type:"textarea", 
       name: "description",  
       label:"Описание", 
-      wrapClass: "col-12 account-item input-animate-label",
+      wrapClass: "col-12 account-item",
       validate: ['required', 'minLength'],
       
       hideByClickId: 'knit',

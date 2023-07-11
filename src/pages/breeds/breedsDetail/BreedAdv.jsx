@@ -17,7 +17,7 @@ import ico32 from 'front-end/images/adv/dlitelnost-zhizni-koshka.svg';
 import ico33 from 'front-end/images/adv/potomstvo-koshka.svg';
 import ico34 from 'front-end/images/adv/razmer-koshka.svg';
 
-const BreedAdv = ({ listings }) => {
+const BreedAdv = ({ listings, breedsCategory }) => {
 
   const renderItemFromTo = (id, title, ico, partsText) => {
     return (
@@ -120,14 +120,11 @@ const BreedAdv = ({ listings }) => {
 
   return (
     <div className="breed-adv">
-
-      {/* {renderItemArr('naznachenie', 'Назначение', ico1)} */}
+      {breedsCategory === 'koshki' ? (renderItemObj('razmer_koshka', 'Размер', ico34)) : (renderItemObj('razmer', 'Размер', ico9))}
 
 
       {renderItemFromTo('stoimost_shhenka', 'Стоимость щенка', ico2, 'тыс. руб.')}
       {renderItemFromTo('stoimost_kotenka', 'Стоимость котенка', ico2, 'тыс. руб.')}
-
-
 
       {renderItemFromTo('dlitelnost_zhizni', 'Длительность жизни', ico3, 'лет')}
       {renderItemFromTo('dlitelnost_zhizni_koshka', 'Длительность жизни', ico32, 'лет')}
@@ -135,18 +132,34 @@ const BreedAdv = ({ listings }) => {
       {renderItemFromTo('potomstvo', 'Потомство', ico4, 'щенков')}
       {renderItemFromTo('potomstvo_koshka', 'Потомство', ico33, 'котят')}
 
-
+      {renderItem('linka', 'Линька', ico7)}
+      {renderItemObj('strana', 'Страна происхождения', ico50)}
       {renderItemFromToFamale('rost_v_holke', 'Рост в холке', ico5, 'см.')}
       {renderItemFromToFamale('ves', 'Вес', ico6, 'кг.')}
+      {breedsCategory !== 'koshki' && (renderItemArr('naznachenie', 'Назначение', ico1))}
+      {/* {renderItemArr('naznachenie', 'Назначение', ico1)} */}
 
 
 
-      {renderItem('linka', 'Линька', ico7)}
+
+
+
+
+
+
+
+
+
+
+
+
+
+      {breedsCategory !== 'koshki' && (renderItemArr('soderzhanie', 'Содержание', ico8))}
       {/* {renderItemArr('soderzhanie', 'Содержание', ico8)} */}
-      {renderItemObj('strana', 'Страна происхождения', ico50)}
-      {/* {renderItem('osobennosti_porody', 'Особенности породы', ico3)} */}
-      {renderItemObj('razmer', 'Размер', ico9)}
-      {renderItemObj('razmer_koshka', 'Размер', ico34)}
+
+      {breedsCategory !== 'koshki' && (renderItem('osobennosti_porody', 'Особенности породы', ico3))}
+
+
 
 
       {/* <div className="btn-container">

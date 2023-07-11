@@ -22,14 +22,15 @@ export default function(){
       "breeds_nurseries",
     ],
     activeCards: {
-      type:"switch",
+      type:"radio",
       name: "activeCards", 
       label: "Статус", 
       options: [
-        {name:"Активно",value:"on"},
-        {name:"Не активно", value:"off"},
+        {label:"Активно", value:"on"},
+        {label:"Не активно", value:"off"},
       ],
-      wrapClass: "col-12 account-item"
+      wrapClass: "col-12 account-item",
+      hideByClickId: false
     },
     typeCompany: {
       type:"showByClick",
@@ -81,7 +82,7 @@ export default function(){
       name: "cards_description_mini",  
       label:"Краткое описание", 
       labelSecond:"Длина текста не должна превышать 110 символов, включая пробелы.", 
-      wrapClass: "col-12 account-item input-animate-label",
+      wrapClass: "col-12 account-item",
       num: "04",
       maxLength: 110
     },
@@ -90,7 +91,7 @@ export default function(){
       name: "cards_description_full",  
       label:"Подробное описание", 
       labelSecond:"Длина текста не должна превышать 3 000 символов, включая пробелы.", 
-      wrapClass: "col-12 account-item input-animate-label",
+      wrapClass: "col-12 account-item",
       maxLength: 3000,
       num: "05",
     },

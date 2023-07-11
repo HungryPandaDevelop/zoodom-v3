@@ -36,7 +36,7 @@ const TempateInputCity = (props) => {
     };
 
     const hideByBodyClick = (e) => {
-      if (e.target.className !== 'search-input input-decorate' && e.target.className !== 'search-name city-name') {
+      if (e.target.className !== 'custom-select' && e.target.className !== 'custom-select-name') {
         setCityPopupState(false)
       }
 
@@ -64,6 +64,10 @@ const TempateInputCity = (props) => {
 
     input.onChange(e.currentTarget.getAttribute('namecity'));
   }
+  const onClearSearch = (e) => {
+    setСhoiseNameFiltering('');
+    setRussianCities(russianCities);
+  }
   const onSearchCity = (e) => {
 
     setСhoiseNameFiltering(e.target.value);
@@ -77,21 +81,21 @@ const TempateInputCity = (props) => {
   const renderCityList = (russianCitiesListParam) => {
 
     return (russianCitiesListParam.length > 0) ? russianCitiesListParam.map((item, index) => (
-      <li
+      <div
         key={index}
         coords={[item.coords.lat, item.coords.lon]}
         namecity={item.name}
         onClick={choiseCity}
+        className='search-list-item'
 
       >
-        {item.name}</li>
+        {item.name}</div>
     )) : (<li>Список пуст</li>);
   }
 
   return (
     <div className={className}>
       <div className='search-field-input'>
-        {num && <i className="num-offset">{num}</i>}
 
 
         <input
@@ -101,25 +105,25 @@ const TempateInputCity = (props) => {
           className={`input-decorate  ${input.value.length > 0 ? 'input-empty' : ''} `}
 
         />
-        {label && <label><b>{label}</b>{labelSecond && <div className='hint-input-file'><i><span>{labelSecond}</span></i></div>}</label>}
-        <div className="search-field">
+        {label && <label><b>{num}. {label}</b>{labelSecond && <div className='hint-input-file'><i><span>{labelSecond}</span></i></div>}</label>}
+        <div className={`custom-select ${cityPopupState ? 'active' : ''}`}>
 
-          <div
-            className="search-name city-name"
-            onClick={() => { setCityPopupState(true) }}
-          >{сhoiseName}</div>
-          <i className={`search-field-arrow ${cityPopupState ? 'active' : ''}`}></i>
+          <span className='custom-select-name'
+            onClick={() => { setCityPopupState(!cityPopupState) }}
+          >
+            {сhoiseName}
+          </span>
+          <i></i>
 
 
           {cityPopupState && (
-            <div
-              className="search-field-popup"
+            <ul
+              className="ln search-field-popup"
               ref={wrapperRef}
             >
               {/* <div className="filters-close-popup" onClick={() => { setCityPopupState(false) }}></div> */}
-              <div className="search-field-container">
-                <i></i>
-
+              <div className="search-field-select">
+                <i onClick={onClearSearch}></i>
                 <input
                   ref={inputRef}
                   type="text"
@@ -132,10 +136,10 @@ const TempateInputCity = (props) => {
                 />
               </div>
 
-              <ul className="ln">
+              <div className="search-list">
                 {renderCityList(russianCitiesList)}
-              </ul>
-            </div>
+              </div>
+            </ul>
           )}
         </div>
       </div>

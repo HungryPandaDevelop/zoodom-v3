@@ -41,8 +41,7 @@ const Template = ({
 
   return (
     <div className={className}>
-      {num && <i className="num-offset">{num}</i>}
-      {label && <label><b>{label}</b> {labelSecond ? <span>{labelSecond}</span> : ''}</label>}
+      {label && <label><b>{num}. {label}</b> {labelSecond ? <span>{labelSecond}</span> : ''}</label>}
       <ul className="ln binding">
         {options.map((item, index) => (
           <li

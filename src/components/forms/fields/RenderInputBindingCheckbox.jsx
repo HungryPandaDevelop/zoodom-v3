@@ -45,8 +45,7 @@ const RenderInputBinding = ({ accountInfo, name, label, labelSecond, options, nu
 
   return (
     <>
-      {num && <i className="num-offset">{num}</i>}
-      <label><b>{label}</b> {labelSecond ? <span>{labelSecond}</span> : ''}</label>
+      <label><b>{num}. {label}</b> {labelSecond ? <span>{labelSecond}</span> : ''}</label>
       <div className='checkbox-container'>
         <Field
           name={name}

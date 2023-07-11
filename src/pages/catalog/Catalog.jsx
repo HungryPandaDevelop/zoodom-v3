@@ -1,9 +1,7 @@
 import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
-import Breadcrumbs from 'pages/parts/Breadcrumbs';
-import PageTitle from 'pages/parts/PageTitle';
 
-import Meta from 'pages/parts/Meta';
+import Breadcrumbs from 'pages/parts/Breadcrumbs';
+
 
 import { connect } from 'react-redux';
 
@@ -51,7 +49,7 @@ const Catalog = ({
         console.log('in select')
         allFilterArr.map(item => {
           let stopAddAnimal = 0;
-          item.breeds_nurseries.map(el => {
+          item.breeds_nurseries && item.breeds_nurseries.map(el => {
             if (el.animal === valueSelect.label && stopAddAnimal === 0) {
               stopAddAnimal++;
               filterArrAnimal.push(item)
@@ -101,34 +99,10 @@ const Catalog = ({
     <>
       <div className="stub"></div>
 
-      {/*params.catagoryName === 'sobak' ? (
-        <Meta
-          typeMeta='default'
-          title='Породы собак с фото названием и описанием по алфавиту 600+'
-          description='Все породы собак с фотографиями и описанием характера. Каталог собак, который вам поможет выбрать какую собаку завести.'
-          keywords='собаки породы все псы каталог фото корм вязка питание дрессировка собачек псов библиотека по алфавиту выбор порода щенки'
-          ogtype='article'
-          metah1='Все породы собак по алфавиту'
-          metah2_1='Назначение'
-          metah2_2='Размер'
-          metah2_3='Содержание'
-          metah3_1='Страна'
-          metah3_2='Быстрый поиск породы'
-        />
-      ) : (
-        <Meta
-          typeMeta='default'
-          title='Все питомники на сервисе Зооника'
-          description='Все питомники на сервисе Зооника'
-          keywords='Все питомники на сервисе Зооника'
-
-        />
-      )*/}
-
       <Breadcrumbs titleCategory={titleCategory} listingType={params.catagoryName} />
 
-      <CatalogChange
-      />
+      <CatalogChange />
+
       <div className="content">
         <div className="main-grid">
           <div className="col-6">

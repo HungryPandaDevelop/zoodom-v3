@@ -49,6 +49,7 @@ const Breeds = () => {
     return <>Loading</>
   }
 
+  console.log('listings', listings)
   return (
     <>
       <Meta
@@ -56,6 +57,7 @@ const Breeds = () => {
         description={listings.desriptionSeo}
         keywords={listings.keywordsSeo}
       />
+
 
       <div className='content'>
         <div className="stub"></div>
@@ -78,7 +80,9 @@ const Breeds = () => {
               <div className=" breed-description" id="point-1">
 
                 <div dangerouslySetInnerHTML={{ __html: listings.pervyj_abzac }}></div>
+
                 <div id="point-2" dangerouslySetInnerHTML={{ __html: listings.pervyj_abzac_second }}></div>
+
                 {listings && listings.otlichitelnye_cherty && (
                   <div id="point-3">
                     <Traits listings={listings} breedsCategory={params.breedsCategory} />
@@ -137,7 +141,7 @@ const Breeds = () => {
 
             <div className="col-3 col-xxl-4 col-lg-5 col-md-4 col-xs-12 breed-adv-box hidden-xs">
               {/* {console.log('listings', listings)} */}
-              <BreedAdv listings={listings} />
+              <BreedAdv listings={listings} breedsCategory={params.breedsCategory} />
 
               <PageNav breedsCategory={params.breedsCategory} />
             </div>

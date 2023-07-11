@@ -53,7 +53,7 @@ const BreedsSearch = ({
       setLoading(false);
 
       const hideByBodyClick = (e) => {
-        if (e.target.className !== 'search-name' && e.target.className !== 'search-input input-decorate') {
+        if (e.target.className !== 'custom-select' && e.target.className !== 'custom-select-name' && e.target.className !== 'input-decorate') {
           setSearchPopupState(false)
         };
       };
@@ -90,11 +90,12 @@ const BreedsSearch = ({
   const renderList = (list) => {
 
     return (list.length > 0) ? list.map((item, index) => (
-      <li
+      <div
         key={index}
         onClick={choiseSelect}
+        className='search-list-item'
       >
-        {item.name}</li>
+        {item.name}</div>
     )) : (<li>Список пуст</li>);
   }
 
@@ -126,38 +127,39 @@ const BreedsSearch = ({
   return (
     <div className='search-field-input'>
       <label><b>Породы</b></label>
-      <div className="search-field">
+      <div className={`custom-select ${searchPopupState ? 'active' : ''}`}>
 
         <div
-          className="search-name"
+          className="custom-select-name"
           onClick={() => { setSearchPopupState(true) }}
         >{selectSearch}
 
         </div>
 
-        <i className={`search-field-arrow ${searchPopupState ? 'active' : ''}`}></i>
+        <i ></i>
 
         {searchPopupState && (
-          <div
-            className="search-field-popup"
+          <ul
+            className="ln search-field-popup"
             ref={wrapperRef}
           >
-            <div className="search-container">
+            <div className="search-field-select">
               {breedChoise ? (<i onClick={clearSearch} className="ico-empty-search"></i>) : <i className="search-ico"></i>}
 
               <input
                 ref={inputRef}
                 type="text"
                 value={сhoiseNameFiltering}
-                className="search-input input-decorate"
+                className="input-decorate"
                 onChange={onSearch}
+                placeholder="Введите название породы"
               />
             </div>
 
-            <ul className="ln">
+            <div className="search-list">
               {loading === true ? 'loading...' : renderList(breedList)}
-            </ul>
-          </div>
+            </div>
+          </ul>
         )}
       </div>
     </div>

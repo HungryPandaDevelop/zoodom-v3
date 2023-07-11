@@ -1,12 +1,13 @@
 export const renderList = (listParam, choiseOnClick) => {
 
   return (listParam.length > 0) ? listParam.map((item, index) => (
-    <li
+    <div
       key={index}
       option={item.name}
       onClick={(e)=>{choiseOnClick(e)}}
+      className="search-list-item"
     >
-      {item.name}</li>
+      {item.name}</div>
   )) : (<li>Список пуст</li>);
 };
 

@@ -62,8 +62,7 @@ const RenderInputComplex = ({
 
   return (
     <div className={className}>
-      {num && <i className="num-offset">{num}</i>}
-      {label && (<label><b>{label}</b></label>)}
+      {label && (<label><b>{num}. {label}</b></label>)}
       <FieldArray
         allFields={allFields}
         name={name}

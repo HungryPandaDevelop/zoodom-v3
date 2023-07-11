@@ -1,10 +1,10 @@
-import inst from 'front-end/images/social/instagram-blue.svg'
-import ok from 'front-end/images/social/ok-blue.svg'
-import ru from 'front-end/images/social/ru-blue.png'
-import tw from 'front-end/images/social/twitter-blue.svg'
-import vk from 'front-end/images/social/vk-blue.svg'
-import youtube from 'front-end/images/social/youtube-blue.svg'
-import facebook from 'front-end/images/social/facebook-blue.svg'
+import inst from 'front-end/images/social/instagram-white.svg'
+import ok from 'front-end/images/social/ok-white.svg'
+import ru from 'front-end/images/social/youtube-white.svg'
+import tw from 'front-end/images/social/twitter-white.svg'
+import vk from 'front-end/images/social/vk-white.svg'
+import youtube from 'front-end/images/social/youtube-white.svg'
+import facebook from 'front-end/images/social/facebook-white.svg'
 
 const SocialContacts = ({ listing }) => {
   return (

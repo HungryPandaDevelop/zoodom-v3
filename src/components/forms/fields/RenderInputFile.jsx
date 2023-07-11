@@ -18,7 +18,7 @@ const TemplateFile = (props) => {
     token
   } = props;
 
-  const siteWp = 'http://zoo-base.sait.website/';
+  const siteWp = 'https://zoo-base.sait.website/';
 
   const headers = {
     Authorization: "Bearer " + token,
@@ -97,8 +97,7 @@ const TemplateFile = (props) => {
 
   return (
     <div className={className}>
-      {num && <i className="num-offset">{num}</i>}
-      {label && <label><b>{label}</b>{labelSecond && <div className='hint-input-file'><i><span>{labelSecond}</span></i></div>}</label>}
+      {label && <label><b>{num ? (<>{num}. </>) : ''}{label}</b>{labelSecond && <div className='hint-input-file'><i><span>{labelSecond}</span></i></div>}</label>}
 
       <div
         className="file-input-container"

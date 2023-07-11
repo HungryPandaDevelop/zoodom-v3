@@ -11,13 +11,12 @@ const ListPopup = ({
 }) => {
 
   return (
-    <div
-      className="search-field-popup"
+    <ul
+      className="ln search-field-popup"
       ref={wrapperRef}
     >
-      <div className="filters-close-popup" onClick={() => { setCityPopupState(false) }}></div>
-      <div className="search-field-container">
-        <i></i>
+      <div className="search-field-select">
+        <i className='ico-empty-search'></i>
         <input
           ref={inputRef}
           type="text"
@@ -29,11 +28,10 @@ const ListPopup = ({
           placeholder="Порода"
         />
       </div>
-
-      <ul className="ln">
+      <div className="search-list">
         {renderList(currentList, choiseOnClick)}
-      </ul>
-    </div>
+      </div>
+    </ul>
   )
 }
 

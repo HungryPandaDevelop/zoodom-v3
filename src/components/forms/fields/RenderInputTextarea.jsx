@@ -34,9 +34,7 @@ const TempateInputTextarea = (props) => {
 
   return (
     <div className={className}>
-      {num && <i className="num-offset">{num}</i>}
-
-
+      {label && <label htmlFor={input.name}><b>{num ? (<>{num}. </>) : ''}{label}</b>{labelSecond && <div className='hint-input-file'><i><span>{labelSecond}</span></i></div>}</label>}
       <textarea
         {...input}
         type="textarea"
@@ -45,7 +43,7 @@ const TempateInputTextarea = (props) => {
         maxLength={maxLength}
       >
       </textarea>
-      {label && <label htmlFor={input.name}><b>{label}</b>{labelSecond && <div className='hint-input-file'><i><span>{labelSecond}</span></i></div>}</label>}
+
       {(checkErrorSubmit && (error && <span className='input-error-text'>{error}</span>))}
     </div>
   );

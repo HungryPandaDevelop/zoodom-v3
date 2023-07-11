@@ -5,7 +5,7 @@ const path = require('path');
 const axios = require('axios');
 const fs = require('fs');
 
-const siteWp = 'http://zoo-base.sait.website/';
+const siteWp = 'https://zoo-base.sait.website/';
 
 // const { initializeApp, applicationDefault, cert } = require('firebase.config');
 

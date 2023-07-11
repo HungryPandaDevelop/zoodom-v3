@@ -21,18 +21,17 @@ const TempateInputText = (props) => {
     errorOn, meta: { touched, error },
     num } = props;
 
-  useEffect(() => {
-    // Save instance for the further update
+  // useEffect(() => {
+  // Save instance for the further update
 
-    // dp.current = new AirDatepicker($input.current);
-  }, []);
+  // dp.current = new AirDatepicker($input.current);
+  // }, []);
 
 
 
 
   return (
     <div className={className}>
-      {num && <i className="num-offset">{num}</i>}
       {/* <input
         {...input}
         type="text"
@@ -41,18 +40,17 @@ const TempateInputText = (props) => {
         ref={$input}
         className={`input-decorate  ${input.value.length > 0 ? 'input-empty' : ''}`}
       /> */}
+
       <InputMask
         {...input}
         type="date"
-        // mask='99.99.9999'
-        maskChar=' '
-
         id={input.name}
         className={`input-decorate  ${input.name.length > 0 ? 'input-empty' : ''} `}
       >
-        {inputProps => <input ref={$input} {...inputProps} initalValue=" " />}
+        {inputProps => <input ref={$input} {...inputProps}  {...input} />}
       </InputMask>
-      {label && <label htmlFor={input.name}><b>{label}</b> {labelSecond ? <span>{labelSecond}</span> : ''}</label>}
+
+      {label && <label htmlFor={input.name}><b>{num ? (<>{num}. </>) : ''}{label}</b> {labelSecond ? <span>{labelSecond}</span> : ''}</label>}
 
       {errorOn && touched && error && <span className='error-hint'>{error}</span>}
 

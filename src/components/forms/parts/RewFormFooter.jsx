@@ -18,7 +18,7 @@ const RewFormFooter = ({ userInfo, statusName, setStatusName }) => {
         <div className="title-rew-small">
           Вы оставляете отзыв как:
         </div>
-        <h3>
+        <h3 className="title-rew-name">
           {statusName ? <>{userInfo.name} {userInfo.family} {userInfo.secondName}</> : 'Аноним'}
 
         </h3>

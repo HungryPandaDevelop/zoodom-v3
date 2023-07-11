@@ -2,13 +2,7 @@ import SpecializationPitomnik from 'pages/catalog/parts/cardsDetail/Pitomnik/Spe
 
 import SocialContacts from 'pages/catalog/parts/cardsDetail/SocialContacts';
 
-import { specializationArr } from "pages/catalog/parts/cardsDetail/Pitomnik/specializationArr";
-
 const CompanyInfo = ({ listing, typePitomnik }) => {
-
-  const formatPhone = (value) => {
-    return `+7 (${value.slice(0, 3)}) ${value.slice(3, 6)}-${value.slice(6, value.length)}`
-  }
 
 
   return (
@@ -20,14 +14,17 @@ const CompanyInfo = ({ listing, typePitomnik }) => {
               <img src={listing.cards_logo[0]} alt="" />
             </div>)}
 
-            <div className="cards-company-name"> {listing.card_name}</div>
+
           </div>
-          {listing.breeds_nurseries && (
-            <div className="col-6">
-              <SpecializationPitomnik typePitomnik={typePitomnik} />
-            </div>
-          )}
+
           <ul className='cards-company-contacts ln col-12'>
+            {listing.card_name && (
+              <li>
+                <h3>Питомник:</h3>
+                <span>{listing.card_name}</span>
+              </li>
+            )}
+
             {listing.cards_coords && (
               <li>
                 <h3>Адрес:</h3>
@@ -49,6 +46,11 @@ const CompanyInfo = ({ listing, typePitomnik }) => {
               <li>
                 <h3>Сайт:</h3>
                 <span>{listing.card_site}</span>
+              </li>
+            )}
+            {listing.breeds_nurseries && (
+              <li>
+                <SpecializationPitomnik typePitomnik={typePitomnik} />
               </li>
             )}
             {listing.social && (
