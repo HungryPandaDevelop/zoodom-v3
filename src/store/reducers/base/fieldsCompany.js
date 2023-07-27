@@ -111,7 +111,7 @@ export default function(){
       name: "card_city",  
       placeholder: "Выберите город", 
       label:"Выберите город", 
-      wrapClass: "col-12 account-item input-animate-label",
+      wrapClass: "col-12 account-item",
       num: "07"
     },
     cards_coords: { 
@@ -134,7 +134,7 @@ export default function(){
       name: "card_mail",  
       label:"Email", 
       wrapClass: "col-12 account-item input-animate-label",
-      // validate: ['mailCheck'],
+      validate: ['mailCheck'],
       num:"11"
     },
     card_site:{

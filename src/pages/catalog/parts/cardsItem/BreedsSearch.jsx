@@ -105,8 +105,6 @@ const BreedsSearch = ({
 
     setBreedList(newListSelect);
 
-    setSelectSearch(e.currentTarget.innerText);
-
     setSearchPopupState(false);
 
     setBreedChoise(e.currentTarget.innerText);
@@ -133,10 +131,8 @@ const BreedsSearch = ({
           className="custom-select-name"
           onClick={() => { setSearchPopupState(true) }}
         >{selectSearch}
-
         </div>
-
-        <i ></i>
+        <i></i>
 
         {searchPopupState && (
           <ul

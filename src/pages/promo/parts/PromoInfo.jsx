@@ -2,6 +2,16 @@ import { specializationArr } from "pages/catalog/parts/cardsDetail/Pitomnik/spec
 
 import { useEffect, useState } from 'react';
 
+import inst from 'front-end/images/social/instagram-white.svg'
+import ok from 'front-end/images/social/ok-white.svg'
+import ru from 'front-end/images/social/youtube-white.svg'
+import tw from 'front-end/images/social/twitter-white.svg'
+import vk from 'front-end/images/social/vk-white.svg'
+import youtube from 'front-end/images/social/youtube-white.svg'
+import facebook from 'front-end/images/social/facebook-white.svg'
+
+import repostCat from 'front-end/images/social-repost-cat.svg'
+import repostDog from 'front-end/images/social-repost-dog.svg'
 
 const CompanyInfo = ({ listing }) => {
 
@@ -119,20 +129,47 @@ const CompanyInfo = ({ listing }) => {
             </li>
           )}
         </ul>
+
         <div className="promo-info-footer">
-          <div className="promo-price">
-            <b>Цена:</b>
-            {listing.typePromo === 'knit' ?
-              listing.price_knit
-              :
-              listing.price_single
-            } р.
-          </div>
+          {(listing.price_single || listing.price_group) && (
+            <div className="promo-price">
+              <b>Цена:</b>
+              {listing.price_single ?
+                listing.price_single && listing.price_single + ' р.' :
+                listing.price_group && listing.price_group.from + ' - ' + listing.price_group.to + ' р.'
+              }
+            </div>
+          )}
+
           <div className="btn-container">
             <a href="#" className="btn btn--blue">
               Забронировать
             </a>
           </div>
+
+        </div>
+        <div className="repost-social">
+          <div className="repost-social-top">
+            <div>
+              {listing.binding.label.indexOf('Коты') > 0 ? <img src={repostCat} alt="" /> : <img src={repostDog} alt="" />}
+
+            </div>
+            <div className="repost-social-icons">
+              Хочу репостики
+              <div className='social'>
+                <a href="/"><img src={inst} alt="inst" /></a>
+                <a href="/"><img src={ok} alt="ok" /></a>
+                <a href="/"><img src={ru} alt="rutube" /></a>
+                <a href="/"><img src={tw} alt="tw" /></a>
+                <a href="/"><img src={vk} alt="vk" /></a>
+                <a href="/"><img src={youtube} alt="youtube" /></a>
+                <a href="/"><img src={facebook} alt="facebook" /></a>
+
+              </div>
+            </div>
+          </div>
+
+
         </div>
       </div>
     </>

@@ -1,4 +1,5 @@
 import ImageGallery from 'react-image-gallery';
+import stubImg from 'front-end/images/stub-img.svg';
 
 import { useState, useEffect } from 'react';
 
@@ -40,7 +41,7 @@ const CardsGallery = ({ getImages, typeOut }) => {
             />
           </div>
         </>
-      ) : 'empty'}
+      ) : (<div className="img-cover promo-stub-empty" style={{ backgroundImage: `url( ${stubImg} )` }}></div>)}
     </div>
   )
 }

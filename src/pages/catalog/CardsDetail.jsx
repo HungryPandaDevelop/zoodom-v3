@@ -123,6 +123,7 @@ const CardsDetail = ({ uid }) => {
         />
         <PromosList
           idEl={params.elementId}
+          name={listing.card_name}
         />
         <Reviews
           title={listing.card_name}

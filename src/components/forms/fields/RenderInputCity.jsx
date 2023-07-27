@@ -16,7 +16,7 @@ const TempateInputCity = (props) => {
     russianCities
   } = props;
 
-  const [сhoiseName, setСhoiseName] = useState('');
+  const [сhoiseName, setСhoiseName] = useState('Выбрать город');
   const [сhoiseNameFiltering, setСhoiseNameFiltering] = useState('');
   const [russianCitiesList, setRussianCities] = useState(russianCities);
   const [cityPopupState, setCityPopupState] = useState(false);

@@ -80,7 +80,8 @@ const RenderInputBinding = ({
           nuwOptions.push({
             label: item.card_name,
             value: item.id,
-            breeds_nurseries: item.breeds_nurseries
+            breeds_nurseries: item.breeds_nurseries,
+            card_city: item.card_city
           });
         })
         setListings(nuwOptions);

@@ -24,9 +24,9 @@ export default function(){
       "promo_photos",
       "price_group",
       "price_single",
-      "price_knit",
+      // "price_knit",
       "date_berth_month",
-      "pomet_price",
+      // "pomet_price",
       "serf_porodi_vazka",
     ],
     activeCards: {
@@ -254,8 +254,7 @@ export default function(){
       label:"Стоимость за щенка/котенка", 
       labelSecond:"Заполните какое-то одно поле. От/до или фиксируемую стоимость", 
       wrapClass: "col-12 account-item",
-      validate: ['required', 'minLength'],
-      hideByClickId: "sale",
+      hideByClickId: "sale anons",
       allFields: [
         { 
           type:"text", 
@@ -277,17 +276,16 @@ export default function(){
       label:"Стоимость за щенка/котенка", 
       labelSecond:"Заполните какое-то одно поле. От/до или фиксируемую стоимость", 
       wrapClass: "col-12 account-item input-animate-label",
-      validate: ['required', 'minLength'],
-      hideByClickId: 'sale',
+      hideByClickId: 'sale knit',
     },
-    price_knit:{
-      type:"text", 
-      name: "price_knit",  
-      label:"Стоимость ", 
-      wrapClass: "col-12 account-item input-animate-label",
-      validate: ['required', 'minLength'],
-      hideByClickId: 'knit',
-    },
+    // price_knit:{
+    //   type:"text", 
+    //   name: "price_knit",  
+    //   label:"Стоимость ", 
+    //   wrapClass: "col-12 account-item input-animate-label",
+    //   validate: ['required', 'minLength'],
+    //   hideByClickId: 'knit',
+    // },
     description:{
       type:"textarea", 
       name: "description",  
@@ -319,27 +317,27 @@ export default function(){
       ],
       hideByClickId: "anons",
     },
-    pomet_price: {
-      type: "multy", 
-      mainname: "pomet_price", 
-      label:"Стоимость",  
-      wrapClass: "col-12 account-item",
-      hideByClickId: "anons",
-      allFields: [
-        { 
-          type:"text", 
-          name: "from", 
-          label: "от", 
-          wrapClass: "col-6 account-item input-animate-label",
-        },
-        { 
-          type:"text", 
-          name: "to", 
-          label: "до", 
-          wrapClass: "col-6 account-item input-animate-label",
-        },
-      ],
-    },
+    // pomet_price: {
+    //   type: "multy", 
+    //   mainname: "pomet_price", 
+    //   label:"Стоимость",  
+    //   wrapClass: "col-12 account-item",
+    //   hideByClickId: "anons",
+    //   allFields: [
+    //     { 
+    //       type:"text", 
+    //       name: "from", 
+    //       label: "от", 
+    //       wrapClass: "col-6 account-item input-animate-label",
+    //     },
+    //     { 
+    //       type:"text", 
+    //       name: "to", 
+    //       label: "до", 
+    //       wrapClass: "col-6 account-item input-animate-label",
+    //     },
+    //   ],
+    // },
     serf_porodi_vazka: {
       type:"switch",
       name: "serf_porodi_vazka", 

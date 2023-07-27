@@ -56,13 +56,8 @@ import RenderInputBreedsChoise from './extraFields/RenderInputBreedsChoise';
 import RenderOwnBreedsSelect from './extraFields/RenderOwnBreedsSelect';
 
 
-const RenderFields = ({ orderFields, objFields, checkErrorSubmit, setErrCheck, outsideValue }) => {
-  const numCount = 0;
+const RenderFields = ({ orderFields, objFields, checkErrorSubmit, setErrCheck, outsideValue, setErrMessage }) => {
 
-  const setNum = () => {
-    numCount++;
-    console.log('num', numCount);
-  }
 
   const choiseFieldType = (type, obj, index) => {
     switch (type) {
@@ -85,6 +80,7 @@ const RenderFields = ({ orderFields, objFields, checkErrorSubmit, setErrCheck, o
               checkErrorSubmit={checkErrorSubmit}
               setErrCheck={setErrCheck}
               num={index}
+              setErrMessage={setErrMessage}
             />
           </>
         );
@@ -384,7 +380,7 @@ const RenderFields = ({ orderFields, objFields, checkErrorSubmit, setErrCheck, o
             className={obj.wrapClass}
             // num={obj.num}
             num={index}
-            setNum={setNum}
+
 
           />
         );

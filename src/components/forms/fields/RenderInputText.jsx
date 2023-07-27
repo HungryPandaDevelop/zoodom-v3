@@ -17,6 +17,7 @@ const TempateInputText = (props) => {
     setErrCheck,
     className,
     numBool,
+    setErrMessage,
     meta: {
       error,
     }
@@ -30,6 +31,7 @@ const TempateInputText = (props) => {
     if (setErrCheck) {
       if (error) {
         setErrCheck(false);
+        setErrMessage && setErrMessage(error)
       }
       else {
         setErrCheck(true);
@@ -41,7 +43,6 @@ const TempateInputText = (props) => {
   useEffect(() => {
     // setNum();
   }, []);
-
 
   return (
     <div className={className}>
@@ -69,7 +70,10 @@ const RenderInputText = ({
   num,
   checkErrorSubmit,
   setErrCheck,
+  numBool,
+  setErrMessage
 }) => {
+
 
 
   const {
@@ -78,7 +82,6 @@ const RenderInputText = ({
     label,
     labelSecond,
     wrapClass,
-    numBool,
     hideByClickId
   } = obj;
 
@@ -109,6 +112,7 @@ const RenderInputText = ({
     validate={validateArr}
     checkErrorSubmit={checkErrorSubmit}
     setErrCheck={setErrCheck}
+    setErrMessage={setErrMessage}
 
   />;
 }

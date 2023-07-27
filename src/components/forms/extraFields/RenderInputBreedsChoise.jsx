@@ -36,7 +36,7 @@ const TemplateInputComplex = ({ allFields, fields, btnAddText }) => {
         </div>
       ))}
       <div className="btn-container-breeds-search">
-        <div className='btn btn--orange ico-in ico-in--left btn-add' onClick={() => { fields.push(); }}>
+        <div className='btn btn--blue-border ico-in ico-in--left btn-add' onClick={() => { fields.push(); }}>
           <i></i><span>{btnAddText}</span>
         </div>
       </div>

@@ -3,11 +3,20 @@ import { Field } from 'redux-form';
 import { connect } from 'react-redux';
 
 
-const TemplateInputRadio = ({ label, labelSecond, options, input, num, item, className }) => {
+const TemplateInputRadio = ({
+  label,
+  labelSecond,
+  options,
+  input,
+  num,
+  item,
+  className,
+  numBool
+}) => {
 
   return (
     <div className={className}>
-      {label && <label><b>{num}. {label}</b> {labelSecond ? <span>{labelSecond}</span> : ''}</label>}
+      {label && <label><b>{!numBool ? num + '.' : ' '} {label}</b> {labelSecond ? <span>{labelSecond}</span> : ''}</label>}
       <div className="checkbox-container">
         {options.map((item, index) => (
           <div
@@ -52,7 +61,8 @@ const RenderInputCheckboxSimple = ({
   num,
   inputValueConnect,
   hideByClickId,
-  className
+  className,
+  numBool
 }) => {
 
   if (hideByClickId && !inputValueConnect) { return false }
@@ -66,6 +76,7 @@ const RenderInputCheckboxSimple = ({
       options={options}
       component={TemplateInputRadio}
       num={num}
+      numBool={numBool}
       className={className}
     />
   );

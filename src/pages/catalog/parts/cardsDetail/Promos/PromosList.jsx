@@ -5,12 +5,11 @@ import EmptyList from 'pages/cabinet/parts/EmptyList';
 import PromosItem from 'pages/promo/PromosItem';
 
 
-const Promos = ({ idEl }) => {
+const Promos = ({ idEl, name }) => {
   const [listings, setListings] = useState([]);
   const [loading, setLoading] = useState(true);
 
 
-  console.log('idEl', idEl)
 
   useEffect(() => {
     if (idEl) {
@@ -32,13 +31,18 @@ const Promos = ({ idEl }) => {
   if (listings.length === 0) { return false; }
 
   return (
-    <>
+    <div className='promo-list-section'>
 
 
-      <div className="main-full">
-        <h2>
-          Объявления
-        </h2>
+      <div className="main-grid head-section">
+        <div className="col-6">
+          <h2>
+            Объявления {name && 'питомника ' + name}
+          </h2>
+        </div>
+        <div className="col-6 btn-container">
+          <a href="/">Все Объявления</a>
+        </div>
       </div>
       <div className="catalog-grid">
         {loading ? <div className='col-12'><PreloaderList /></div> : listings.length > 0 ? (
@@ -62,7 +66,7 @@ const Promos = ({ idEl }) => {
         )}
       </div>
 
-    </>
+    </div>
   )
 }
 

@@ -50,8 +50,8 @@ const TemplateFieldSwitch = (props) => {
 
   return (
     <div className={className}>
-      {num && <i className="num-offset">{num}</i>}
-      <label><b>{label}</b></label>
+
+      <label><b>{num && num + '.'} {label}</b></label>
       <div
         className="switch-container"
       >

@@ -76,8 +76,8 @@ const Template = ({
 
   return (
     <div className={className}>
-      {num && <i className="num-offset">{num}</i>}
-      {label && <label><b>{label}</b> {labelSecond ? <span>{labelSecond}</span> : ''}</label>}
+
+      {label && <label><b>{num && num + '.'} {label}</b> {labelSecond ? <span>{labelSecond}</span> : ''}</label>}
 
       <ul className='breeds-radio ln col-12'>
         {listings.map((item, index) => (
@@ -86,7 +86,7 @@ const Template = ({
             key={index}
             className={`${active?.name == item.name && "active"}`}
           >
-            {console.log(item)}
+            {/* {console.log(item)} */}
             {item.photoParents && (<img src={item.photoParents[0].name} alt="" />)}
             <div>{item.name}</div>
 

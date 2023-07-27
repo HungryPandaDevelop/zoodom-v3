@@ -73,7 +73,7 @@ const CardsListDefault = ({ uid, nameList, whatshow, whatshowName, titleForm, ad
     navigate(`/cabinet/${nameList}-edit/${listingId}`)
   }
 
-  console.log('nameList', nameList)
+  // console.log('nameList', nameList)
 
 
   return (

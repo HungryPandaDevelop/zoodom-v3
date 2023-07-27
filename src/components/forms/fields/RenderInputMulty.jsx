@@ -2,6 +2,8 @@ import React from 'react';
 
 import { connect } from 'react-redux';
 
+import RenderTitle from './RenderTitle';
+
 import RenderInputText from './RenderInputText'; // поле стандартное
 
 import RenderInputTextarea from './RenderInputTextarea'; // поле текста
@@ -21,22 +23,35 @@ const RenderInputMulty = (props) => {
     setErrCheck,
     className,
     hideByClickId,
-    inputValueConnect
+    inputValueConnect,
+    numBool
   } = props;
 
   const renderFields = allFields.map((field, index) => {
     switch (field.type) {
+      case 'title':
+        return (
+          <React.Fragment key={index} >
+            <RenderTitle
+              // name={`${mainname}.${field.name}`}
+              // id={`${mainname}.${field.name}`}
+              label={field.label}
+              className={field.wrapClass}
+              numBool={true}
+            />
+            {/* {field.label && <label htmlFor={`${mainname}.${field.name}`}><b>{field.label}</b></label>} */}
+          </React.Fragment>
+        )
       case 'text':
         return (
           <React.Fragment key={index} >
-
             <RenderInputText
               // name={`${mainname}.${field.name}`}
               // id={`${mainname}.${field.name}`}
               obj={{ ...field, name: mainname + '.' + field.name }}
               checkErrorSubmit={checkErrorSubmit}
               setErrCheck={setErrCheck}
-
+              numBool={true}
             />
             {/* {field.label && <label htmlFor={`${mainname}.${field.name}`}><b>{field.label}</b></label>} */}
           </React.Fragment>
@@ -72,14 +87,15 @@ const RenderInputMulty = (props) => {
   });
 
   if (hideByClickId && !inputValueConnect) { return false }
-  else if (hideByClickId && inputValueConnect !== hideByClickId) { return false }
-
+  else if (hideByClickId && inputValueConnect.length > 0 && hideByClickId.indexOf(inputValueConnect) === -1) {
+    return false;
+  }
 
   return (
     <div className={className}>
       <div className={`main-grid multy-input`}>
         <div className="col-12">
-          {label && <label ><b>{num}. {label}</b>{labelSecond && <div className='hint-input-file'><i><span>{labelSecond}</span></i></div>}</label>}
+          {label && <label ><b>{!numBool ? num + '.' : ''} {label}</b>{labelSecond && <div className='hint-input-file'><i><span>{labelSecond}</span></i></div>}</label>}
         </div>
         {renderFields}
       </div>

@@ -51,13 +51,21 @@ const PromosItem = ({ listing }) => {
             </Link>
           </h3>
         </div>
+        {listing.binding.card_city && (
+          <div className="cards-item-info">
+            <h3>
+              Город: {listing.binding.card_city}
+            </h3>
+          </div>
+        )}
+
         <div className="promo-item-bottom">
           <div className="promo-item-price">
-            {listing.typePromo === 'knit' ?
-              listing.price_knit
-              :
-              listing.price_single
-            } р.
+            {listing.price_single ?
+              listing.price_single && 'Цена: ' + listing.price_single + ' р.' :
+              listing.price_group && 'Цена: ' + listing.price_group.from + ' - ' + listing.price_group.to + ' р.'
+            }
+
           </div>
           <div className="promo-item-btn">
             <a href="#" className="btn btn--blue">Забронировать</a>

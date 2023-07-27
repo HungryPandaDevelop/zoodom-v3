@@ -32,17 +32,17 @@ const Header = () => {
       <AuthInfo />
       <header >
         <div className="main-grid">
-          <div className="vertical-align col-2 col-xs-5">
+          <div className="vertical-align col-2 col-sm-5 col-xs-5">
             <Logo />
           </div>
-          <div className="vertical-align col-6 hidden-xs">
+          <div className="vertical-align col-6 hidden-sm hidden-xs">
             <Nav />
           </div>
-          <div className="vertical-align col-4 col-xs-4 cabinet-header-container">
+          <div className="vertical-align col-4 col-sm-6 col-xs-4 cabinet-header-container">
             <CheckLogged
             />
           </div>
-          <div className="vertical-align col-7 hidden-md hidden-sm hidden-lg hidden-xl hidden-xxl">
+          <div className="vertical-align col-7 col-sm-1  hidden-md hidden-lg hidden-xl hidden-xxl">
             <div className="hamburger-btn" onClick={onShowMenu}></div>
           </div>
 

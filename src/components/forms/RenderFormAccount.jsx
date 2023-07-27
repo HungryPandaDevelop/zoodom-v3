@@ -7,6 +7,7 @@ import { useState } from 'react';
 
 import ploaderImg from 'front-end/images/preloader.gif'
 
+import { toast } from 'react-toastify';
 // --------------------------------------------------------------------
 
 const TemplateForm = (props) => {
@@ -23,6 +24,7 @@ const TemplateForm = (props) => {
 
   const [checkErrorSubmit, setCheckErrorSubmit] = useState(false);
   const [errCheck, setErrCheck] = useState(true);
+  const [errMessage, setErrMessage] = useState(true);
 
 
   const onSubmit = (e) => {
@@ -33,7 +35,9 @@ const TemplateForm = (props) => {
     setTimeout(() => {
       setCheckErrorSubmit(false);
     }, 10000);
-
+    if (!errCheck) {
+      toast.error(errMessage)
+    }
     errCheck && !waitAnsw && onSubmitIn();
 
   };
@@ -52,7 +56,7 @@ const TemplateForm = (props) => {
         objFields={objFields}
         checkErrorSubmit={checkErrorSubmit}
         setErrCheck={setErrCheck}
-
+        setErrMessage={setErrMessage}
       />
       <div className='col-12 btn-container'>
         <button className="btn   btn-save btn--blue ico-in ico-in--left" onClick={(e) => { onSubmit(e) }} >

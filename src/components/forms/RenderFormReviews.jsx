@@ -21,7 +21,8 @@ const TemplateForm = (props) => {
     userInfo,
     outsideValue,
     statusName,
-    setStatusName
+    setStatusName,
+    setErrMessage
   } = props;
 
   const [checkErrorSubmit, setCheckErrorSubmit] = useState(false);
@@ -73,6 +74,7 @@ const TemplateForm = (props) => {
         objFields={objFields}
         checkErrorSubmit={checkErrorSubmit}
         setErrCheck={setErrCheck}
+        setErrMessage={setErrMessage}
         outsideValue={outsideValue}
       />
 

@@ -1,6 +1,8 @@
 
 import CardsGallery from 'pages/catalog/parts/cardsDetail/CardsGallery';
 import { choiseCurrentAnimal } from 'pages/catalog/parts/cardsDetail/Pitomnik/currentAnimal';
+import moment from 'moment';
+import Opisanie from './PitomnikInfo/Opisanie';
 
 const PitomnikInfo = ({ listing, setOpenReserve, setReservAnimal }) => {
 
@@ -38,39 +40,60 @@ const PitomnikInfo = ({ listing, setOpenReserve, setReservAnimal }) => {
           const {
             breed,
             date_berth,
-            diplomi,
             gender,
             name,
-            otsutstvie_disiplazii,
-            otsutstvie_patelli,
-            sertifikat_porodi,
-            sertifikat_pochek,
-            sertifikat_PKdef,
-            titul_interchempiona,
-            sertifikat_sma,
             tituli,
-            ychastie_vistavki,
             photoParents,
             animal,
-            sertifikate
+            sertifikate,
+            smotr,
+            sert_disp,
+            sert_patel,
+            opisaone,
+            soc_slujb,
+            sport_napravlenia,
+            sport_vidi,
+            vidi_slugb
           } = item;
 
 
           let currentAnimal = choiseCurrentAnimal(animal);
 
+          let currentDateFormat = moment(date_berth).format('D.MM.YYYY');
+
+          let arrDressirovka = [soc_slujb, sport_napravlenia, sport_vidi, vidi_slugb];
+
+          const setString = (arrDressirovka) => {
+            let dressirovka = '';
+            arrDressirovka.map(el => {
+              el?.map(item => {
+                dressirovka = dressirovka + item + ', ';
+              });
+            })
+            if (dressirovka.slice(-2) === ', ') {
+              dressirovka = dressirovka.slice(0, -2)
+            }
+            // console.log(dressirovka);
+            return dressirovka;
+          }
+
+
+
 
           return (
             <div key={index} className="pitomnik-breed-item col-6 col-sm-12 col-xs-12">
               <div className="pitomnik-breed-item-roof">
-                <span className='pitomnik-breed-gender'>{gender}:</span>
-                <div className='pitomnik-breed-name'>
-                  {name}
+                <div>
+                  <span className='pitomnik-breed-gender'>{gender}:</span>
+                  <b className='pitomnik-breed-name'>
+                    {name}
+                  </b>
                 </div>
                 <div className='pitomnik-breed-type'>
-                  <h3>
+                  <span>
                     Порода:
-                  </h3>
-                  <span>{breed}</span>
+                  </span>
+                  <b>{breed}</b>
                 </div>
               </div>
               <div className="pitomnik-breeds-gallery">
@@ -79,86 +102,63 @@ const PitomnikInfo = ({ listing, setOpenReserve, setReservAnimal }) => {
               <ul className='ln pitomnik-breeds-info'>
                 {date_berth && (<li>
                   <h3>
-                    Дата рождения
+                    Дата рождения:
                   </h3>
-                  <span>{date_berth}</span>
+                  <span>{currentDateFormat}</span>
                 </li>)}
-                {diplomi && (<li>
+                {smotr === 'on' && (<li>
                   <h3>
-                    Дипломы
-                  </h3>
-                  <span>{diplomi}</span>
-                </li>)}
-
-                {otsutstvie_disiplazii && (<li>
-                  <h3>
-                    Сертификат на отсутствие дисплазии (HD)
+                    Племенной смотр:
                   </h3>
                   <span>Есть</span>
                 </li>)}
-                {otsutstvie_patelli && (<li>
+                {sert_disp && (<li>
                   <h3>
-                    Сертификат на отсутствие пателлы (PL)
+                    Сертификат на дисплазию:
                   </h3>
-                  <span>Есть</span>
+                  <span>{'HD: ' + sert_disp.HDa}  {'ED: ' + sert_disp.HDb}</span>
                 </li>)}
-                {sertifikat_porodi && (<li>
+                {sert_patel && (<li>
                   <h3>
-                    Сертификат породы
+                    Сертификат на пателлу:
                   </h3>
-                  <span>Есть</span>
-                </li>)}
-                {sertifikat_sma && (<li>
-                  <h3>
-                    Сертификат на отсутствие спинальной мышечной атрофии (SMA)
-                  </h3>
-                  <span>Есть</span>
-                </li>)}
-                {sertifikat_PKdef && (<li>
-                  <h3>
-                    Сертификат на отсутствие дифицита пируваткиназы (PKdef)
-                  </h3>
-                  <span>Есть</span>
-                </li>)}
-                {sertifikat_pochek && (<li>
-                  <h3>
-                    Сертификат на отсутствие поликистозы почек
-                  </h3>
-                  <span>Есть</span>
-                </li>)}
-                {sertifikat_pochek && (<li>
-                  <h3>
-                    Сертификат на отсутствие поликистозы почек
-                  </h3>
-                  <span>Есть</span>
-                </li>)}
-                {titul_interchempiona && (<li>
-                  <h3>
-                    Титул интерчемпиона
-                  </h3>
-                  <span>Есть</span>
-                </li>)}
-                {tituli && (<li>
-                  <h3>
-                    Титулы
-                  </h3>
-                  <span>{tituli}</span>
-                </li>)}
-                {ychastie_vistavki && (<li>
-                  <h3>
-                    Участие в выставках
-                  </h3>
-                  <span>{ychastie_vistavki}</span>
+                  <span>PL: {sert_patel.PLa} / {sert_patel.PLb}</span>
                 </li>)}
 
                 {sertifikate && (<li>
                   <h3>
-                    Родословная
+                    Родословная:
                   </h3>
                   <span>
                     <a target='_blank' href={sertifikate[0]} alt="ссылка">Ссылка</a>
                   </span>
                 </li>)}
+
+                {opisaone && (<li className='extra-line'>
+                  <h4>
+                    Описание
+                  </h4>
+                  <div>
+                    <Opisanie text={opisaone} />
+                  </div>
+                </li>)}
+                {tituli && (<li className='extra-line'>
+                  <h4>
+                    Титулы
+                  </h4>
+                  <div>
+                    <Opisanie text={tituli} />
+                  </div>
+                </li>)}
+                {(soc_slujb || sport_napravlenia || sport_vidi || vidi_slugb) && (<li className='extra-line'>
+                  <h4>
+                    Дрессировка
+                  </h4>
+                  <div>
+                    <Opisanie text={setString(arrDressirovka)} />
+                  </div>
+                </li>)}
+
               </ul>
               <div className="btn-container">
                 <div className="btn btn--blue" onClick={() => { setOpenReserve(true); setReservAnimal(currentAnimal); }}>
