@@ -6,7 +6,7 @@ import { useParams, useSearchParams } from 'react-router-dom';
 import axios from "axios";
 import Breadcrumbs from 'pages/parts/Breadcrumbs';
 import EmptyList from 'pages/cabinet/parts/EmptyList';
-import BtnTop from 'pages/breeds/breedsList/BtnTop';
+
 import { firstLoadList, checkUrl } from 'pages/breeds/breedsList/allGenerateUrl';
 
 const Breeds = () => {
@@ -66,7 +66,7 @@ const Breeds = () => {
       <Breadcrumbs
       />
       <div className="main-full">
-        <BtnTop />
+
         {params.breedsCategory === 'koshki' ? (<h1>Все породы кошек по алфавиту</h1>) : (<h1>Все породы собак по алфавиту</h1>)}
 
 

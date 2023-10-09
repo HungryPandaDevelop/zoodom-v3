@@ -245,7 +245,6 @@ section {
 .breadcrumbs {
   padding: 15px 0 15px;
   color: #231F20;
-  font-weight: 700;
 }
 .breadcrumbs em, .breadcrumbs span {
   vertical-align: middle;
@@ -311,9 +310,11 @@ section {
 @media (max-width: 576px) {
   .content h1 {
     font-size: 20px;
+    padding: 9px 0 20px 45px;
+    line-height: 1;
   }
   .content h1::before {
-    top: 26px;
+    top: 11px;
   }
   section .title-section {
     font-size: 24px;
@@ -324,6 +325,7 @@ section {
   }
   .breadcrumbs {
     padding: 8px 0 8px;
+    font-size: 14px;
   }
   .content {
     min-height: calc(100vh - 270px);
@@ -2656,6 +2658,37 @@ header.stick .header-bg {
   opacity: 1;
 }
 
+.scroll-top-box {
+  width: 60px;
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 60px;
+  z-index: 2;
+  right: 0;
+  bottom: 30px;
+  background-color: #fff;
+  border-radius: 15px 0 0 15px;
+  -webkit-box-shadow: 0 0 15px rgba(35, 31, 32, 0.3);
+          box-shadow: 0 0 15px rgba(35, 31, 32, 0.3);
+}
+
+.scroll-top {
+  margin: auto;
+  width: 38px;
+  height: 38px;
+  border: 2px solid #729EFC;
+  border-radius: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url("../images/arrows/carret-up-blue.svg");
+  cursor: pointer;
+  -webkit-transition: ease-out 0.5s;
+  transition: ease-out 0.5s;
+}
+
 .nav-header {
   width: 100%;
   display: -webkit-box;
@@ -2729,6 +2762,9 @@ header.stick .header-bg {
   }
 }
 @media (max-width: 576px) {
+  .stub {
+    height: 60px;
+  }
   header {
     height: 70px;
   }
@@ -5239,6 +5275,9 @@ footer .cooperation b {
   -ms-grid-column-span: 4;
   grid-column: span 4;
 }
+.breed-description-text:last-child {
+  margin-bottom: 0;
+}
 
 .project-img-border {
   -webkit-transition: ease-out 0.5s;
@@ -5349,9 +5388,6 @@ footer .cooperation b {
   }
 }
 @media (max-width: 576px) {
-  .breed-description-roof-content {
-    text-align: center;
-  }
   .breed-description-roof-content h2 span {
     display: block;
   }
@@ -5361,9 +5397,6 @@ footer .cooperation b {
   .breed-description-text {
     margin-left: 0;
   }
-  .breed-description {
-    text-align: center;
-  }
   .breed-adv .btn-container {
     margin-top: 30px;
   }
@@ -5372,6 +5405,20 @@ footer .cooperation b {
   }
   .breed-description h2 {
     font-size: 17px;
+    margin: 0;
+  }
+  .breed-traits .traits-item {
+    padding-left: 0;
+    padding-bottom: 10px;
+    text-align: left;
+    padding-top: 12px;
+  }
+  .breed-traits h3 {
+    padding-left: 60px;
+    padding-bottom: 12px;
+  }
+  .breed-traits img {
+    border-radius: 0;
   }
 }
 /*-----breed-end-----*/

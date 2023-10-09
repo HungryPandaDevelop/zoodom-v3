@@ -1,7 +1,7 @@
 import CheckLogged from 'blocks/header/CheckLogged';
 import Logo from 'blocks/header/Logo';
 import MenuPopup from 'components/popup/MenuPopup';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 import AuthInfo from 'blocks/header/AuthInfo';
 import Nav from 'blocks/header/Nav';
@@ -12,15 +12,25 @@ import CallPopup from 'components/popup/CallPopup';
 
 const Header = () => {
 
+
   const [mobMenuOn, setMobMenuOn] = useState(false);
 
   const onShowMenu = () => {
-    console.log('mobMenuOn', mobMenuOn)
+    // console.log('mobMenuOn', mobMenuOn)
     setMobMenuOn(!mobMenuOn);
   };
 
+  const scrollTop = () => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
+  }
+
+
+
   return (
     <>
+      <div className="scroll-top-box" onClick={scrollTop}>
+        <div className="scroll-top" ></div>
+      </div>
 
 
       <MenuPopup
