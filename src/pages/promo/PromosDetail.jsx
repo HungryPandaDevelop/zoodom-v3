@@ -2,10 +2,21 @@ import React, { useState, useEffect } from 'react';
 import { getSingleListing } from 'store/asyncActions/getSingleListing';
 import { useParams } from 'react-router-dom';
 import CardsGallery from 'pages/catalog/parts/cardsDetail/CardsGallery';
-import Meta from 'pages/parts/Meta';
+
 import Breadcrumbs from 'pages/parts/Breadcrumbs';
 import PromoInfo from 'pages/promo/parts/PromoInfo';
 import stubImg from 'front-end/images/stub-img.svg';
+
+import {
+  OKShareButton,
+  TelegramShareButton,
+  VKShareButton,
+  WhatsappShareButton,
+  FacebookShareButton,
+  FacebookIcon,
+  VKIcon
+
+} from "react-share";
 
 const PromosDetail = () => {
 
@@ -241,7 +252,15 @@ const PromosDetail = () => {
                         </div> */}
             </div>
             <div className="col-3 col-md-4 col-xs-12 ">
-
+              1111111111111
+              <VKShareButton
+                url={'htps://www.example.com'}
+                quote={'Dummy text!'}
+                hashtag="#muo"
+              >
+                <VKIcon size={32} round />
+              </VKShareButton>
+              111111111
               <PromoInfo
                 listing={listing}
               />
