@@ -1,0 +1,61 @@
+include ../../default/build-header
+		
+// header end
+.stub
++roofContent("Кабинет")
+	.main-grid
+		.col-3.col-sm-12
+			include ../../components/cabinet-nav.pug
+		.col-9.col-sm-12
+			.cabinet-account.cabinet-edit.shadow-container.main-grid
+				.col-12 
+					h3 Составить резюме
+				.col-2.col-lg-3.col-sm-5.input-photo-container 
+					b Фото профиля
+					.input-photo
+						+inputFile(0, 'Выбрать фото',)   
+						//- .preloader
+						img.input-user-ico(src="/images/icons/avatar-border-white.svg", alt="")
+						img.input-photo-ico(src="/images/cabinet/photo-add-white.svg", alt="")
+						.edit-photo-hint Изображение формата jpg,png не менее 150x150 px, не более 8Мб
+						//- .input-photo-uploaded(style="background-image:url('/images/temp/avatar-1.jpg')")
+						//- .input-photo-clear
+						
+				.col-5.account-item 
+					b Имя пользователя
+					input.input-decorate(type="text")
+				.col-5.account-item 
+					b Email
+					input.input-decorate(type="text")
+				.col-5.col-offset-3.account-item
+					b Телефон
+					input.input-decorate(type="text")
+				.col-5.account-item 
+					b Пол
+					.checkbox-box 
+						.checkbox
+							label Мужчина 
+								input(type="radio" name="gender")
+								span
+						.checkbox
+							label Женщина 
+								input(type="radio" name="gender")
+								span
+				.col-5.col-offset-3.account-item
+					b Дата рождения
+					input.input-decorate(type="text")
+
+				.col-9.col-offset-3.btn-container 
+					.btn.btn-save.btn--blue.ico-in.ico-in--left
+						i
+						span Сохранить
+					.btn.ico-in.ico-in--left.btn-cancel
+						i
+						span Отменить
+
+// footer start  
+.stub
+
+include ../../blocks/footer.pug
+
+// footer end 

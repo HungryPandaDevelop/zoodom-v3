@@ -1,0 +1,263 @@
+$routeIco: 34px
+
+.gomap
+  background-color: $grayColorSecond
+  @include positionElement(100%, 100%, 0,0)
+
+.gomap-popup-container,
+.gomap-route-conainer
+  min-height: calc(100vh - 130px)
+.gomap-popup-container
+  width: 100%
+  height: 100%
+  display: flex
+  flex-direction: column
+  padding: 30px 0
+  position: relative
+
+  .btn-show-map
+    padding: 15px
+.gomap-popup
+  margin: auto
+  width: 100%
+  text-align: center
+  margin-bottom: 30px
+  .cards-face-container
+    margin: 0 auto 30px
+    max-width: 200px
+
+.gomap-popup-close
+
+.gomap-popup-roof
+  font-size: $smallSize
+  padding-bottom: 15px
+  color: $grayColor
+  position: relative
+  .like-btn
+    right: auto
+    left: 0
+    top: -8px
+    .like-hint
+      right: auto
+      left: 30px
+    &:hover
+      .like-hint
+        right: auto
+        left: 38px
+.gomap-popup-like
+  position: relative
+
+.gomap-popup-info
+  h3
+    color: $greenColor
+    font-size: $mediumSize
+    line-height: 1.2
+    a
+      text-decoration: none
+    &:hover
+      color: $orangeColor
+  h4
+    color: $grayColor
+    font-size: 18px
+.gomap-popup-price
+  font-size: $mediumSize
+  margin-bottom: 30px
+  font-weight: 600
+
+.gomap-popup-list
+  margin-bottom: 30px
+  a
+    text-decoration: none
+  img
+    margin-right: 8px
+  li
+    margin-bottom: 8px
+#map
+  @include positionElement(100%, 100%, 0,0)
+
+.gomap-route-cell
+  position: relative
+  height: 1px
+.gomap-route-conainer
+  display: flex
+  width: 1px
+  align-items: flex-end
+  padding-bottom: 30px
+.gomap-route-offset-box
+  width: 61px
+  height: 32px
+/*********/
+.from-ico
+  @include icoEl(30px, 30px, '../images/icons/route-marker-blue.svg')
+  margin: auto 0
+.to-ico
+  @include icoEl(30px, 30px, '../images/icons/route-marker-orange.svg')
+  margin: auto 0
+
+// $routeIco: 34px вначале
+.car-ico
+  @include icoEl($routeIco, $routeIco, '../images/icons/car.svg')
+.bus-ico
+  @include icoEl($routeIco, $routeIco, '../images/icons/bus.svg')
+.walk-ico
+  @include icoEl($routeIco, $routeIco, '../images/icons/walk.svg')
+
+.gomap-route
+  position: absolute
+  left: 0
+  width: 100%
+  display: grid
+  grid-template-columns: repeat(10, 1fr)
+  padding: 6px 9px
+  gap: 15px
+  .input-decorate
+    padding: 8px 15px
+.input-route-item
+  grid-column: span 3
+  display: flex
+  gap: 8px
+  i
+    margin-right: 8px
+  span
+    display: block
+    margin: auto 0
+  &>ymaps
+    top: auto !important
+    bottom: 100% !important
+    &>ymaps>ymaps
+      top: auto
+      bottom: 100%
+.checkbox-route
+  grid-column: span 4
+  display: flex
+  justify-content: space-between
+  span
+    display: inline-block
+    width: 21px
+    height: 21px
+    border-radius: 100%
+    border: 2px solid
+    cursor: pointer
+.checkbox-route-item
+  width: 30%
+  display: flex
+  justify-content: space-between
+  i
+    border: 2px solid
+    background-size: 70% 70%
+    border-radius: 4px
+    box-shadow: $shadowThree
+    cursor: pointer
+  *
+    margin: auto
+  hr
+    width: 50%
+    margin-left: 2px
+    margin-right: 2px
+    height: 4px
+    border: 0
+    border-bottom: 5px dotted
+
+.checkbox-route-car
+  i,
+  hr,
+  span
+    border-color: $blueColor
+  .checkbox-route--active
+    @include bgImageEl("../images/icons/ok-sea.svg", 80%)
+.checkbox-route-bus
+  i,
+  hr,
+  span
+    border-color: $greenColor
+  .checkbox-route--active
+    @include bgImageEl("../images/icons/ok-green.svg", 80%)
+.checkbox-route-walk
+  i,
+  hr,
+  span
+    border-color: $blueColor
+  .checkbox-route--active
+    @include bgImageEl("../images/icons/ok-blue.svg", 80%)
+@media (max-height: 863px)
+  .gomap-popup .cards-face-container
+    max-width: 140px
+@media (max-height: 805px)
+  .gomap-popup-price
+    margin-bottom: 8px
+  .gomap-popup-list
+    margin-bottom: 8px
+@media (max-height: 770px)
+  .gomap-popup-info
+    h3
+      font-size: 18px
+    h4
+      font-size: 16px
+    .gomap-popup-price
+      font-size: 18px
+  .gomap-popup
+    padding-top: 6px
+    margin-bottom: 15px
+
+  .gomap-popup-roof
+    padding-bottom: 6px
+  .gomap-popup-roof .like-btn
+    top: -5px
+  .gomap-popup-container
+    padding: 8px 0
+  .gomap-route-conainer
+    padding-bottom: 8px
+  .gomap-popup-list
+    font-size: 14px
+    li
+      margin-bottom: 0
+@media (max-height: 720px)
+  .gomap-popup-info h4
+    display: none
+@media (max-height: 680px)
+  .gomap-popup-roof
+    display: none
+@media (max-width: 1280px)
+  .gomap-popup-roof
+    font-size: 12px
+  .gomap-popup-info
+    h3
+      font-size: 18px
+    h4
+      font-size: 16px
+    .gomap-popup-price
+      font-size: 18px
+  .gomap-popup-container,
+  .gomap-route-conainer
+    min-height: calc(100vh - 160px)
+@media (max-width: 1150px)
+  .gomap-popup-roof
+    padding: 0 45px 8px
+  .gomap-popup-list
+    img
+      display: none
+@media (max-width: 992px)
+  .gomap-route
+    gap: 15px
+  .input-route-item
+    grid-column: span 10
+    span
+      width: 60px
+  .input-container
+    width: calc(100% - 100px)
+  .checkbox-route
+    grid-column: span 10
+@media (max-width: 576px)
+  .input-route-item
+    display: none
+  .gomap-popup-roof
+    display: none
+  .gomap-popup-close
+    display: block
+  .gomap-popup-container,
+  .gomap-route-conainer
+    min-height: auto
+  .gomap-route
+    gap: 15px
+    bottom: auto
+    top: 0

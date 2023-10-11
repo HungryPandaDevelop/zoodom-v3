@@ -1,0 +1,81 @@
+.category-item
+	a
+		text-decoration: none
+		&:hover
+			color: $blueColor
+	h3
+		font-size: $mediumSize
+		font-weight: 400
+		padding: 15px 0
+		a
+			display: -webkit-box
+			-webkit-line-clamp: 2
+			-webkit-box-orient: vertical
+			line-clamp: 2
+			position: relative
+			overflow: hidden
+// .category-item-btn
+// 	@include positionElement(30px,30px,0,0,left,bottom)
+// 	@include bgImageEl("../images/icons/category-gray.svg", 70%)
+// 	margin: 15px
+// 	cursor: pointer
+// 	background-color: $whiteColor
+// 	border-radius: 100%
+.category-tags
+	@include positionElement(100%, 50%,0,0,left, bottom)
+	background-color: $whiteColor
+	padding: 15px
+	font-size: $smallSize
+
+	transition: ease-out 0.25s
+	top: 100%
+	h4
+		color: $blueColor
+		font-size: inherit
+		margin-bottom: 12px
+	a
+		border: 1px solid $grayColor
+		padding: 2px 8px
+		border-radius: 15px
+		margin-right: 8px
+		margin-bottom: 8px
+		&:hover
+			color: $whiteColor
+			background-color: $blueColor
+			border-color: $blueColor
+.category-item-text
+	overflow: hidden
+	display: -webkit-box
+	-webkit-line-clamp: 2
+	-webkit-box-orient: vertical
+	line-clamp: 2
+	margin: 0 0 15px
+	font-size: $smallSize
+.category-item-img
+	height: 250px
+	display: block
+	position: relative
+	overflow: hidden
+	border-radius: 30px
+	.img-cover
+		@include positionElement(100%,100%,0,0)
+		transform: scale(1)
+		transition: ease-out 0.5s
+	img
+		@include positionElement(100%,100%,0,0)
+	&:hover
+		.img-cover
+			transform: scale(1.1)
+.category-item
+	&:hover
+		.category-tags
+			top: 50%
+@media (max-width: 1620px)
+	.sales-item h3
+		font-size: 20px
+@media (max-width: 1280px)
+	.sales-item-info
+		padding: 15px 15px
+@media (max-width: 576px)
+	.sales-item-info
+		height: auto

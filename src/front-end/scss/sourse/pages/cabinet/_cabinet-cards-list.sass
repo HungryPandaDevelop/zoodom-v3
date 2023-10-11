@@ -1,0 +1,173 @@
+
+.cards-account-container
+	padding: 0
+	.add-cards-container
+		padding: 15px
+		border-bottom: 1px solid $grayColorSecond
+	table
+		width: 100%
+		border-collapse: collapse
+	tr
+		transition: ease-out 0.25s
+	th, td
+		padding: 15px 30px
+		text-align: left
+		border-bottom: 1px solid $grayColorSecond
+
+	.cards-account-topic
+		font-weight: 600
+		a
+			text-decoration: none
+			color: $blueColor
+			&:hover
+				color: $orangeColor
+	tr:hover
+		background-color: rgba($blueColor, 0.05)
+	th:last-child
+		text-align: right
+	td:last-child
+		padding-left: 0
+	.cards-status
+
+		text-align: center
+		padding: 5px
+		border-radius: 30px
+
+		font-size: $smallSize
+	.cards-status--active
+		color: $greenColor
+		background-color: rgba($greenColor, 0.2)
+	.cards-status--noactive
+		color: $redColor
+		background-color: rgba($redColor, 0.2)
+	.cards-item-salary
+		span
+			font-size: $smallSize
+			display: block
+			font-weight: 400
+	.cards-date
+		font-weight: 500
+		font-size: $smallSize
+	.btn-container
+		text-align: right
+
+	.status-btn-container
+		display: flex
+		justify-content: space-between
+		gap: 8px
+		font-weight: 600
+	.status-btn
+		display: inline-block
+		padding: 5px 10px
+		border-radius: 15px
+		background-color: $grayColorSecond
+		font-size: $smallSize
+		cursor: pointer
+		transition: ease-out 0.25s
+		&.active
+			box-shadow: $shadowThree
+	.status-btn--roger
+		background-color: rgba($greenColor , 0.1 )
+		color: $greenColor
+		&.active,
+		&:hover
+			background-color: $greenColor
+			color: $whiteColor
+	.status-btn--turnoff
+		background-color: rgba($redColor , 0.1 )
+		color: $redColor
+		&.active,
+		&:hover
+			background-color: $redColor
+			color: $whiteColor
+	.status-btn--considered
+		background-color: rgba($orangeColor , 0.1 )
+		color: $orangeColor
+		&.active,
+		&:hover
+			background-color: $orangeColor
+			color: $whiteColor
+.table-btn
+	font-size: 0
+	background-color: $grayColor
+	width: 40px
+	height: 40px
+	display: inline-block
+	vertical-align: text-top
+	border-radius: 100%
+	margin-left: 30px
+	cursor: pointer
+	&:first-child
+		margin-left: auto
+.table-btn--edit
+	border: 1px solid $blueColor
+	background-color: $whiteColor
+	@include bgImageEl("../images/cabinet/edit-blue.svg", 60%)
+	&:hover
+		background-color: $blueColor
+		background-image: url("../images/cabinet/edit-white.svg")
+.table-btn--delete
+	border: 1px solid $blueColor
+	background-color: $whiteColor
+	// background-color: rgba($redColor, 0.2)
+	@include bgImageEl("../images/cabinet/trash-blue.svg", 60%)
+	&:hover
+		background-color: $blueColor
+		background-image: url("../images/cabinet/trash-white.svg")
+.table-btn--view
+	background-color: rgba($orangeColor, 0.1)
+	@include bgImageEl("../images/cabinet/view-orange.svg", 60%)
+	&:hover,
+	&.active
+		background-color: $orangeColor
+		background-image: url("../images/cabinet/view-white.svg")
+.table-btn--call
+	background-color: rgba($orangeColor, 0.1)
+	@include bgImageEl("../images/cabinet/video-orange.svg", 60%)
+	&:hover
+		background-color: $orangeColor
+		background-image: url("../images/cabinet/video-white.svg")
+.empty-list-container
+	text-align: center
+	font-size: 18px
+	padding: 0px 15px
+	b
+		color: $blueColor
+.empty-list-text
+	display: block
+.empty-list-ico
+	max-width: 800px
+	height: 500px
+	@include bgImageEl('../images/empty-list.svg')
+
+	margin: 0px auto
+
+@media (max-width: 1280px)
+	.cards-account-container
+		th,td
+			padding: 15px
+		.table-btn
+			margin-left: 15px
+@media (max-width: 992px)
+	.cards-account-container
+		.table-btn
+			margin-bottom: 15px
+@media (max-width: 576px)
+	.search-selects
+		margin-bottom: 15px
+	.empty-list-text
+		font-size: 14px
+		br
+			display: none
+	.empty-list-ico
+		height: 230px
+	.cards-account-container
+		th
+			display: none
+		table,
+		td,
+		tr,
+		tbody
+			display: block
+		td
+			width: 100%

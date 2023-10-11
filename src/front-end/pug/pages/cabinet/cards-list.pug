@@ -1,0 +1,68 @@
+include ../../default/build-header
+		
+// header end
+.stub
++roofContent("Кабинет")
+	.main-grid
+		.col-3.col-sm-12
+			include ../../components/cabinet-nav.pug
+		.col-9.col-sm-12
+			.cards-account-container.cabinet-account.shadow-container
+				.add-cards-container
+					.btn.btn--orange-border.cabinet-add-cards.ico-in.ico-in--left
+						i
+						span Создать резюме
+				table
+					thead 
+						tr.cards-account-head
+							th
+								b Название
+							th
+								b З/п
+							th
+								b Резюме обновлено
+							th
+								b Статус
+							th
+								b Действия
+					tbody
+						tr
+							td
+								.cards-account-topic
+									a(href="#") Старший Кондитер
+							td.cards-item-salary
+								b P 130 000
+								span руб в месяц
+							td
+								.cards-date 26.01.2022
+							td
+								.cards-status.cards-status--active Активно
+							td
+								.btn-container
+									.table-btn.table-btn--edit Редактировать
+									.table-btn.table-btn--delete Удалить
+									.table-btn.table-btn--view Удалить
+						tr
+							td
+								.cards-account-topic
+									a(href="#") Повар-официант
+							td
+								|P 80 000
+							td
+								.cards-date 15.01.2022
+							td
+								.cards-status.cards-status.cards-status--noactive  Не активно
+							td
+								.btn-container
+									.table-btn.table-btn--edit
+										span Редактировать
+									.table-btn.table-btn--delete
+										span Удалить
+				.cards-account-item.main-grid
+			
+// footer start  
+.stub
+
+include ../../blocks/footer.pug
+
+// footer end 

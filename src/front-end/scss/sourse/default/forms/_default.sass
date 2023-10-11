@@ -1,0 +1,160 @@
+.input-decorate,
+.custom-select
+
+	font-family: "medium"
+	font-size: $standartSize
+	// font-weight: 500
+	resize: none
+	background: none
+	color: $blackColor
+	border: 0
+	border-bottom: 1px solid $grayColor
+	transition: ease-out 0.5s
+
+	border-radius: 0px
+	padding-left: 0px
+	padding-bottom: 10px
+	padding-top: 5px
+
+	width: 100%
+	&::placeholder
+		font-family: "regular"
+	&:focus
+		outline: 0
+		// box-shadow: $shadowThree
+textarea.input-decorate
+	border: 1px solid $grayColor
+	border-radius: 15px
+	height: 150px
+	background-color: rgba($whiteColor, 0.3 )
+	padding: 15px
+.account-item
+	label
+		font-size: 18px
+		position: relative
+.input-animate-label
+	position: relative
+	padding-top: 30px
+	label
+		position: absolute
+		transition: all 0.3s ease
+		top: 34px
+		left: 0px
+		cursor: pointer
+	textarea:focus + label,
+	input:focus + label,
+	.input-empty + label
+		top: 0px
+		opacity: 0.5
+.cabinet-account
+	position: relative
+	.input-decorate,
+	.switch-container
+		width: 100%
+		// margin-left: 40px
+		// width: calc(100% - 40px)
+	.input-error
+		border-color: $redColor
+	.input-error-text
+		margin-left: 40px
+.file-decorate-error span,
+.input-error
+	border-color: $redColor
+.mail-error
+	border-color: $orangeColor
+.input-error-text
+	color: $redColor
+	margin-top: 2px
+.form-default
+	h2,h3
+		margin: 0 0 15px
+	b, label
+		display: block
+		margin: 0 0 8px
+		font-size: $standartSize
+	.form-line
+		margin: 0 0 15px
+	button
+		margin: 0 0 15px
+	.btn-container
+		padding-top: 30px
+		.btn
+			margin-right: 30px
+.auth-form
+	padding-left: 18px
+.forgot-password
+	margin-top: 30px
+	padding-left: 30px
+.search-ico
+	@include bgImageEl("../images/icons/loop-black.svg")
+	width: 30px
+	height: 30px
+.search-container
+	margin-bottom: 45px
+	position: relative
+	i
+		position: absolute
+		left: 0
+		top: 26px
+		margin: 4px
+
+	.input-decorate
+		padding-left: 45px
+	.preloader-container
+		@include positionElement(30px,30px,0,0)
+		margin: 4px
+	.preloader
+		width: 25px
+		height: 25px
+		left: 0%
+		top: 26px
+	label
+		color: #000
+		padding-left: 45px
+	.input-search-hint
+		margin-top: 5px
+		font-size: 12px
+		color: #000
+		font-family: "medium"
+
+.ico-empty-search
+	display: inline-block
+	width: 20px
+	height: 20px
+	@include bgImageEl("../images/icons/close-black.svg")
+	position: absolute
+	left: 4px
+	top: 34px
+	cursor: pointer
+.title-rew-small
+	display: inline-block
+.rew-default-container
+	h3
+		margin-bottom: 15px
+.rew-switch
+	label,
+	.switch-container
+		display: inline-block
+		vertical-align: middle
+	label,
+	b
+		margin: 0
+.title-rew-name
+	display: inline-block
+	margin-left: 30px
+.cabinet-account .mail-input-box.account-item
+	input
+		@include bgImageEl("../images/icons/e-mail-blue.svg", 23px, 0 4px)
+		padding-left: 38px
+	label
+		padding-left: 80px
+.cabinet-account .pass-input-box.account-item
+	input
+		@include bgImageEl("../images/icons/pass-blue.svg", 23px, 0 6px)
+		padding-left: 38px
+	label
+		padding-left: 80px
+@media (max-width: 576px)
+	.search-selects
+		.custom-select
+			margin-bottom: 8px

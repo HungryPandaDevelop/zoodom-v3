@@ -1,0 +1,14 @@
+mixin salesItem(name, text, data)
+	.sales-item
+		a(href="#").sales-item-img
+			.img-cover
+				img(src="/images/temp/1.jpg", alt="")
+			.sales-brand 
+				| Royal Canin
+		.sales-item-info
+			h3
+				a(href="#")=name
+			.sales-item-text=text
+			.sales-long
+				b Дата проведения:
+				span 24.04.2023 - 05.05.2023 

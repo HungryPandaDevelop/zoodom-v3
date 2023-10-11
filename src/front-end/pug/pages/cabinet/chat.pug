@@ -1,0 +1,114 @@
+include ../../default/build-header
+		
+// header end
+.stub
++roofContent("Чат")
+	.main-grid
+		.col-3
+			include ../../components/cabinet-nav.pug
+		.col-9 
+			.cabinet-account.cabinet-account-chat.shadow-container
+				.main-grid
+					.col-3.chat-cell
+						.chat-list
+							.chat-list-item.active
+								.chat-list-img.img-cover
+									img(src="/images/temp/logo-comp.jpeg", alt="")
+								.chat-list-about
+									.chat-list-cardsname React Разработчик
+									.chat-list-accountname OOO Рога и копыта
+									.chat-list-status Просмотрено
+							.chat-list-item
+								.chat-list-img.img-cover
+									img(src="/images/temp/logo-comp.jpeg", alt="")
+								.chat-list-about
+									.chat-list-cardsname React Разработчик
+									.chat-list-accountname OOO Джаст сторис
+									.chat-list-status Просмотрено
+
+
+					.col-9.chat-cell
+						.chat-messages
+							.chat-messages-head 
+								.chat-list-img.img-cover
+									img(src="/images/temp/logo-comp.jpeg", alt="")
+								.chat-list-cardsname React Разработчик
+								.chat-list-accountname Cotton Club
+							.chat-messages-list
+								.chat-messages-item 
+									.chat-list-img.img-cover
+										img(src="/images/temp/logo-comp.jpeg", alt="")
+									.chat-messages-body
+										.chat-messages-date
+											| 26.10.2022
+										.chat-messages-text
+											| Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde aspernatur qui ab quo ea! Culpa, repellat numquam ipsa officiis reprehenderit voluptates voluptate sint accusamus dicta ipsum possimus, quis consequatur mollitia.
+								.chat-messages-item 
+									.chat-list-img.img-cover
+										img(src="/images/temp/logo-comp.jpeg", alt="")
+									.chat-messages-body
+										.chat-messages-date
+											| 26.10.2022
+										.chat-messages-text
+											| Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde aspernatur qui ab quo ea! Culpa, repellat numquam ipsa officiis reprehenderit voluptates voluptate sint accusamus dicta ipsum possimus, quis consequatur mollitia.
+								.chat-messages-item 
+									.chat-list-img.img-cover
+										img(src="/images/temp/logo-comp.jpeg", alt="")
+									.chat-messages-body
+										.chat-messages-date
+											| 26.10.2022
+										.chat-messages-text
+											| Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde aspernatur qui ab quo ea! Culpa, repellat numquam ipsa officiis reprehenderit voluptates voluptate sint accusamus dicta ipsum possimus, quis consequatur mollitia.
+								.chat-messages-item 
+									.chat-list-img.img-cover
+										img(src="/images/temp/logo-comp.jpeg", alt="")
+									.chat-messages-body
+										.chat-messages-date
+											| 26.10.2022
+										.chat-messages-text
+											| Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde aspernatur qui ab quo ea! Culpa, repellat numquam ipsa officiis reprehenderit voluptates voluptate sint accusamus dicta ipsum possimus, quis consequatur mollitia.
+								.chat-messages-item 
+									.chat-list-img.img-cover
+										img(src="/images/temp/logo-comp.jpeg", alt="")
+									.chat-messages-body
+										.chat-messages-date
+											| 26.10.2022
+										.chat-messages-text
+											| Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde aspernatur qui ab quo ea! Culpa, repellat numquam ipsa officiis reprehenderit voluptates voluptate sint accusamus dicta ipsum possimus, quis consequatur mollitia.
+								.chat-messages-item 
+									.chat-list-img.img-cover
+										img(src="/images/temp/logo-comp.jpeg", alt="")
+									.chat-messages-body
+										.chat-messages-date
+											| 26.10.2022
+										.chat-messages-text
+											| Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde aspernatur qui ab quo ea! Culpa, repellat numquam ipsa officiis reprehenderit voluptates voluptate sint accusamus dicta ipsum possimus, quis consequatur mollitia.
+								.chat-messages-item 
+									.chat-list-img.img-cover
+										img(src="/images/temp/logo-comp.jpeg", alt="")
+									.chat-messages-body
+										.chat-messages-date
+											| 26.10.2022
+										.chat-messages-text
+											| Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde aspernatur qui ab quo ea! Culpa, repellat numquam ipsa officiis reprehenderit voluptates voluptate sint accusamus dicta ipsum possimus, quis consequatur mollitia.
+								.chat-messages-item.own-messages
+									.chat-messages-body
+										.chat-messages-date
+											| 26.10.2022
+										.chat-messages-text
+											| Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde aspernatur qui ab quo ea! Culpa, repellat numquam ipsa officiis reprehenderit voluptates voluptate sint accusamus dicta ipsum possimus, quis consequatur mollitia.
+									.chat-list-img.img-cover
+										img(src="/images/temp/logo-comp.jpeg", alt="")
+							.chat-messages-form
+								.main-grid
+									.form-line.col-11
+										+inputTextarea('Ваше сообщение')
+									.form-line.btn-container.col-1
+										.btn-chat-send 
+
+// footer start  
+.stub
+
+include ../../blocks/footer.pug
+
+// footer end 

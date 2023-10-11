@@ -1,0 +1,12 @@
+mixin newsItem(name, text, data)
+	.news-item
+		a(href="#").news-item-img
+			.img-cover
+				img(src="/images/temp/1.jpg", alt="")
+		.news-item-info
+			.news-item-date 21.21.2022
+			h3
+				a(href="#")=name
+			.news-item-text=text
+			.btn-container
+				a(href="#").btn--link  Читать подробнее

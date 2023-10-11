@@ -1,0 +1,18 @@
+mixin categoryItem(name, text) 
+	.category-item
+		.category-item-img
+			.img-cover
+				img(src="/images/temp/1.jpg", alt="")
+			//- .category-item-btn
+			.category-tags
+				h4 Дополнительно:
+				a(href="#") Породы
+				a(href="#") Уход
+				a(href="#") Кормление
+				a(href="#") Новости
+				a(href="#") Игры
+				a(href="#") Видео
+		.category-item-info
+			h3
+				a(href="#")=name
+			.category-item-text=text

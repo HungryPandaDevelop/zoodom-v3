@@ -1,0 +1,28 @@
+.cards-raiting
+	@include positionElement(auto, auto,0,0, left, bottom)
+	margin: 15px
+	background-color: $greenColor
+	color: $whiteColor
+	padding: 5px 12px
+	border-radius: 15px
+	text-align: center
+	font-size: $smallSize
+	i
+		@include icoEl(15px, 15px, "../images/icons/star-white.svg")
+		margin-right: 7px
+	i,span, em
+		display: inline-block
+		vertical-align: middle
+	em
+		font-style: normal
+		transition: ease-out 0.25s
+		max-width: 0
+		position: relative
+		overflow: hidden
+		white-space: nowrap
+		margin-left: 0
+.cards-item:hover
+	.cards-raiting
+		em
+			margin-left: 4px
+			max-width: 100px

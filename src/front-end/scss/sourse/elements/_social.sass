@@ -1,0 +1,53 @@
+.social
+  display: inline-block
+  vertical-align: middle
+  a
+    display: inline-block
+    margin: 0 0 0 6px
+    position: relative
+    overflow: hidden
+    font-size: 0
+    border: 1px solid $blueColor
+    background-color: $blueColor
+    border-radius: 100%
+    padding: 4px
+    img,
+    .ico-hover
+      object-fit: cover
+      width: 16px
+      height: 16px
+    &:hover
+      border-color: $blueColorSecond
+      background-color: $blueColorSecond
+      .ico-hover
+        opacity: 1
+        visibility: visible
+  .ico-hover
+    position: absolute
+    left: 50%
+    top: 50%
+    transform: translate(-50%, -50%)
+    opacity: 0
+    visibility: hidden
+
+.social
+  display: inline-block
+  vertical-align: middle
+  .addtoany_list
+    a
+      display: inline-block
+      margin: 0 15px 0 0
+      padding: 8px
+      border: 1px solid $blackColor
+      border-radius: 100%
+      font-size: 0
+      line-height: 1
+      &:hover
+        border: 1px solid $greenColor
+      img
+        object-fit: cover
+        width: 14px
+        height: 14px
+
+    .social-ico--white
+      border-color: $whiteColor

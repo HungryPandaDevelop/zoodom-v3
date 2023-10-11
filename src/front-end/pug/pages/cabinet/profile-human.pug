@@ -1,0 +1,58 @@
+include ../../default/build-header
+		
+// header end
+.stub
++roofContent("Кабинет")
+	.main-grid
+		.col-3.col-sm-12
+			include ../../components/cabinet-nav.pug
+		.col-9.col-sm-12
+			.cabinet-account.shadow-container.main-grid
+				.col-12 
+					h3 Основная информация
+				.col-2.col-lg-3.col-sm-5
+					.cards-face-container
+						b Фото профиля
+						.cards-face.img-cover
+							img(src="/images/temp/avatar-1.jpg", alt="")
+				.col-10.col-lg-9.col-sm-12
+					.account-container.main-grid
+						.account-item.col-6
+							b Фио
+							div Ирина Владимирована Кондакова 
+ 
+						.account-item.col-6 
+							b Email 
+							div
+								a(href="#") bink@inbox.ru
+
+						.account-item.col-6 
+							b Телефон
+							div
+								a(href="#") 8 (985) 282-65-32
+
+						.account-item.col-6 
+							b Пол
+							div
+								| Мужской
+						.account-item.col-6 
+							b Дата рождения
+							div
+								| 16.09.1986
+						.account-item.col-6 
+							b Видимость профиля
+							div
+								| Виден
+					.btn-container 
+						.btn.btn-edit.btn--blue.ico-in.ico-in--left
+							i
+							span Редактировать профиль
+						.btn.btn-delete-profile.btn--red.ico-in.ico-in--left
+							i
+							span Удалить профиль
+// footer start  
+.stub
+
+include ../../blocks/footer.pug
+
+// footer end 

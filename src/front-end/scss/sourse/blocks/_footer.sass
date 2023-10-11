@@ -1,0 +1,106 @@
+.stub-footer
+  height: 90px
+footer
+  position: relative
+  background-color: $blackColor
+  padding: 60px 0 30px
+  color: $whiteColor
+  b
+    color: inherit
+  .main-grid
+    grid-row-gap: 30px
+  ul,
+  li
+    list-style: none
+    margin: 0
+    padding: 0
+
+  nav
+    padding-top: 4px
+    h3
+      color: inherit
+      margin: 0 0 20px
+      font-size: 18px
+  nav li
+    margin: 0 0 10px
+
+  .logo
+    margin: 0 0 15px
+    text-transform: uppercase
+
+  .cooperation
+    margin: 0 0 30px
+    b
+      color: inherit
+      display: block
+  .social
+    margin-bottom: 30px
+  a
+    text-decoration: none
+    &:hover
+      color: $orangeColor
+
+  .company
+    margin-bottom: 15px
+  .cooperation
+    b
+      color: inherit
+      display: block
+.footer-info
+  text-align: right
+.contacts-footer-item
+  margin-bottom: 15px
+  i
+    margin-left: -40px
+    margin-right: 10px
+.phone-ico
+  @include icoEl(30px,30px,"../images/icons/phone-white.svg")
+.marker-ico
+  @include icoEl(30px,30px,"../images/icons/marker-white.svg")
+.mail-ico
+  @include icoEl(30px,30px,"../images/icons/mail-white.svg")
+.footer-bottom
+  display: flex
+  justify-content: space-between
+.footer-bottom-mob
+  display: none
+@media (max-width: 992px)
+  footer
+    font-size: 15px
+@media (max-width: 576px)
+  footer
+    padding: 15px 0 30px
+    .cooperation
+      margin: 0
+    .copyright
+      margin: 0 0 8px
+    .main-grid
+      grid-row-gap: 8px
+    nav
+      li
+        margin: 0 0 4px
+    br
+      height: 10px
+      display: block
+  .footer-bottom
+    display: block
+  .footer-info
+    text-align: left
+    margin-bottom: 15px
+
+  .footer-bottom
+    a
+      margin-right: 15px
+      margin-bottom: 0px
+  .stub-footer
+    height: 0
+  footer
+    .logo img
+      max-width: 151px
+    a
+      display: block
+      width: 100%
+  .footer-bottom-mob
+    display: block
+  .footer-bottom-desk
+    display: none

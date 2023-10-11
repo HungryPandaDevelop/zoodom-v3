@@ -1,0 +1,200 @@
+.cabinet-account-chat
+  height: calc(100vh - 250px)
+
+  .main-grid
+    height: 100%
+    min-height: 0
+.chat-list
+  border-right: 1px solid $grayColorSecond
+  height: 100%
+  position: relative
+  overflow-y: auto
+  @include  styleScroll
+.chat-cell
+  height: 100%
+  min-height: 0
+.chat-messages
+  height: 100%
+
+.chat-messages-list
+  height: calc(100% - 210px)
+.cabinet-account-chat
+  padding: 0
+  .main-grid
+    padding: 0
+    gap: 0
+.chat-list-item
+  padding: 15px
+  border-bottom: 1px solid $grayColorSecond
+  display: flex
+  cursor: pointer
+  transition: ease-out 0.25s
+  text-decoration: none
+  position: relative
+  padding-right: 45px
+  &:hover,
+  &.active
+    background-color: rgba($blueColor, 0.05)
+    color: $blueColor
+    .chat-list-img
+      transform: scale(1.1)
+  a
+    text-decoration: none
+  .chat-list-cardssubname
+    font-size: 12px
+  h3
+    color: inherit
+    font-size: inherit
+  .table-btn--delete
+    width: 30px
+    height: 30px
+    position: absolute
+    right: 10px
+.chat-list-img-wrap
+  position: relative
+  height: 40px
+.chat-list-img
+  width: 40px
+  height: 40px
+  border-radius: 100%
+  transition: ease-out 0.25s
+.chat-list-about
+  padding-left: 15px
+.chat-list-cardsname
+  font-weight: 700
+  text-decoration: underline
+.chat-list-link
+  @include positionElement(calc(100% - 45px), 100%,0,0)
+.chat-list-accountname
+  font-size: $smallSize
+  color: $grayColor
+.new-message-warning
+  @include positionElement(10px,10px,0,0, right, bottom)
+  background-color: $redColor
+  border-radius: 100%
+.chat-messages-list
+  position: relative
+  overflow-y: auto
+  @include  styleScroll
+.chat-messages-item
+  padding: 15px
+  .chat-list-img
+    display: inline-block
+    vertical-align: top
+    margin-right: 10px
+  &.noread
+    background-color: rgba($blueColor, 0.1)
+.chat-messages-head
+  padding: 15px
+  border-bottom: 1px solid $grayColorSecond
+
+  .chat-list-img,
+  .chat-list-accountname,
+  .chat-list-cardsname
+    vertical-align: middle
+    display: inline-block
+    margin-right: 15px
+  .chat-list-accountname
+    position: relative
+    top: 1px
+  a
+    &:hover
+      color: $orangeColor
+.chat-messages-body
+  max-width: 310px
+  background-color: $grayColorThree
+  padding: 15px
+  border-radius: 8px
+  box-shadow: $shadowThree
+  display: inline-block
+  position: relative
+  &::before
+    content: ""
+    @include positionElement(10px,10px,-5px,15px)
+    background-color: $grayColorThree
+    transform: rotate(45deg)
+.own-messages
+  text-align: right
+  .chat-list-img
+    margin-right: 0
+    margin-left: 10px
+  .chat-messages-body
+    background-color: $blueColor
+    color: $whiteColor
+    &::before
+      background-color: $blueColor
+      left: auto
+      right: -5px
+.chat-messages-date
+  font-size: 12px
+  opacity: 0.75
+
+.chat-messages-form
+  padding: 15px
+  border-top: 1px solid $grayColorSecond
+  .btn-chat-send
+    margin: auto
+    margin-right: 0
+    min-width: auto
+    font-size: 0
+  .btn-container
+    margin-top: 15px
+.choise-chat-container
+  text-align: center
+  color: $greenColor
+  font-size: 18px
+  padding: 30px
+  *
+    display: inline-block
+    vertical-align: middle
+.empty-chat-list
+  padding: 15px
+  color: $orangeColor
+  font-size: 18px
+  text-align: center
+  i
+    @include icoEl(30px, 30px, "../images/cabinet/empty-list-chat-orange.svg", "middle", 20px)
+    vertical-align: middle
+    margin-right: 15px
+
+  span
+    vertical-align: middle
+.videos-chat
+  position: relative
+  font-size: 0
+
+.his-video-chat
+  width: 100%
+  max-height: 555px
+  border-radius: 8px
+  border: 1px solid $grayColorSecond
+  @include bgImageEl("../images/cabinet/video-blue.svg", 30px)
+.own-video-chat
+  @include positionElement(300px,225px, 0, 0, right, bottom)
+  border-radius: 8px
+  border: 1px solid $grayColorSecond
+  box-shadow: $shadowFive
+  margin: 30px
+  @include bgImageEl("../images/cabinet/video-orange.svg", 30px)
+.choise-chat-ico
+  @include icoEl(30px,30px, "../images/cabinet/chat-blue.svg")
+  margin-right: 30px
+.popup-in-call
+  @include positionElement(auto, auto, 50%,50%)
+  transform: translateX(-50%) translateY(-50%)
+  max-width: 420px
+  h3
+    font-size: 18px
+    border: 0
+    color: $blackColor
+.hangup-call
+  @include positionElement(60px, 60px, 0,0,left,bottom)
+  border-radius: 100%
+  background-color: $redColor
+  margin: 30px
+  @include bgImageEl("../images/cabinet/call-white.svg", 30px)
+  cursor: pointer
+  border: 1px solid $redColor
+  &:hover
+    background-color: $whiteColor
+    background-image: url("../images/cabinet/call-red.svg")

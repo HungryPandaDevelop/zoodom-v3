@@ -1,0 +1,248 @@
+/*-file-upload-*/
+.file-input-container,
+.file-input-item
+	position: relative
+.input-file
+	// height: $heightContainerFile
+	cursor: pointer
+	opacity: 0
+	@include positionElement(100%,100%)
+	z-index: 1
+.input-file-second
+	opacity: 0
+	width: 0
+	height: 0
+
+.file-decorate
+	// height: $heightContainerFile
+	cursor: pointer
+
+	// padding: 9px 12px
+	// border: 0
+	position: relative
+	font-family: inherit
+	font-size: $standartSize
+	font-weight: 500
+	// resize: none
+	// width: 100%
+	// background: none
+	color: $blackColor
+	@include icoEl(120px, 90px, "../images/icons/file-upload-gray-2.svg")
+	// border-radius: 30px
+	// box-shadow: $shadowFive
+	// border: 1px solid $whiteColor
+
+	span
+		// padding-left: 25px
+		// position: relative
+		// display: block
+		font-size: 20px
+		color: $grayColor
+		@include positionElement(100%, auto, 130px, 20px)
+		// &::before
+		// 	content: ""
+		// 	@include positionElement(20px, 20px, 0, 2px)
+		// 	@include bgImageEl("../images/icons/file.svg", 20px)
+
+	i
+		@include positionElement(30px, 30px, 0, 2px, right, top, 2, absolute, none)
+		@include bgImageEl("../images/icons/close-black.svg")
+		cursor: pointer
+
+.file-decorate-full i
+	display: block
+.hiddened-file
+	opacity: 0
+.notice-file
+	position: absolute
+	right: 0
+	top: 0
+	display: none
+
+	i
+		@include icoEl(30px, 30px, "../images/icons/danger-sign-black.svg")
+		margin-left: 15px
+.notice-file--show
+	display: block
+.hint-input-file
+	display: inline-block
+
+	margin: 0 0 8px
+	// position: absolute
+	// left: 100%
+	// top: 0
+	// margin-left: 30px
+	// display: none
+	span
+		// background-color: #e8e8e8
+		// padding: 5px
+		// border-radius: 4px
+		font-size: $smallSize
+		display: inline-block
+		vertical-align: middle
+		font-style: normal
+		// position: absolute
+		// width: 520px
+		// left: 100%
+		// top: 0%
+		// transform: translateY(-46%)
+
+		// &::before
+		// 	content: ""
+		// 	@include positionElement(10px, 10px, -6px,70%)
+		// 	margin-top: -5px
+		// 	transform: rotate(45deg)
+		// 	background-color: #e8e8e8
+	// i
+	// 	border-radius: 100%
+	// 	background-color: $greenColor
+	// 	@include icoEl(20px, 20px, "../images/icons/info-white.svg")
+	// 	margin-right: 15px
+	// 	font-style: normal
+.file-uploaded
+	position: relative
+	font-size: 0
+	border: 1px solid $blueColor
+	border-radius: 15px
+	display: inline-block
+	margin-right: 15px
+.file-uploaded-container
+	border-radius: 15px
+	position: relative
+	overflow: hidden
+	width: 120px
+	height: 90px
+	img
+		width: 100%
+		height: 100%
+		border-radius: 15px
+		overflow: hidden
+		object-fit: cover
+.file-input-container
+	margin-top: 18px
+	width: 120px
+	margin-bottom: 60px
+	// margin-left: 40px
+	&:hover
+		.file-decorate
+			background-image: url("../images/icons/file-upload-blue-2.svg")
+			color: $blueColor
+/*-file-upload-*/
+
+/*-photo-upload-*/
+.input-photo-container
+
+.input-photo
+	width: 120px
+	height: 120px
+	border: 2px solid #828282
+	margin-left: 40px
+	border-radius: 4px
+	position: relative
+	cursor: pointer
+	position: relative
+	&:hover
+		border-color: $blueColor
+		.input-user-ico
+			background-image: url("../images/icons/avatar-add-blue-border.svg")
+
+	.input-file-container,
+	.input-file
+		@include positionElement(100%, 100% ,0,0, left,top, 1)
+		margin: 0
+	.file-decorate
+	.file-input-container
+		height: 100%
+
+	.input-file,
+	.file-decorate
+		visibility: visible
+		opacity: 0
+	.notice-file
+		font-size: 14px
+		text-align: center
+		padding: 8px
+		background-color: rgba($redColor, 0.9)
+		color: $whiteColor
+		border-radius: 8px
+		box-shadow: $shadowFive
+		top: 30px
+		i
+			margin: 0
+			background-image: url(../images/icons/danger-sign-white.svg)
+		span
+			display: block
+	img
+		position: absolute
+	.input-user-ico
+		@include positionElement(80%,80%,10%,10%)
+		@include bgImageEl("../images/icons/avatar-add-gray-border.svg", 50%)
+	.input-photo-ico
+		@include positionElement(30px,30px, 50%, 10px, left, border-bottom)
+		transform: translateX(-50%)
+	.input-photo-uploaded
+		@include positionElement(100%,100%,0,0)
+		background-size: cover
+		background-position: center
+		border-radius: 8px
+	&:hover
+		.edit-photo-hint
+			opacity: 1
+			visibility: visible
+			box-shadow: $shadowFour
+.file-uploaded-delete,
+.input-photo-clear
+	@include positionElement(24px,24px, 0%, 0%, right, top, 2)
+	margin: -15px
+	border-radius: 100%
+	background-color: $redColor
+	@include bgImageEl("../images/icons/close-white.svg", 15px)
+	transition: ease-out 0.25s
+	cursor: pointer
+	&:hover
+		background-color: $blueColor
+.edit-photo-hint
+	position: absolute
+	background-color: rgba($blackColor, 0.7)
+	box-shadow: $shadowFive
+	color: $whiteColor
+	padding: 5px
+	z-index: 2
+	border-radius: 4px
+	width: 110%
+	font-size: 12px
+	top: 85%
+	left: 50%
+	transform: translateX(-50%)
+	text-align: center
+	transition: ease-out 0.25s
+	opacity: 0
+	visibility: hidden
+/*-photo-upload-*/
+
+/*-dragdrop-upload-*/
+.file-uploaded-wrapper
+	padding-left: 40px
+.dragdrop-container
+	position: relative
+	margin: 15px 0 30px 0px
+	// width: calc(100% - 50px)
+	width: 100%
+	padding: 15px
+	min-height: 90px
+	border: 1px dashed $grayColor
+	// background-color: rgba($blueColor, 0.1)
+	background: rgba(114, 158, 252, 0.1)
+	// border: 1px dashed rgba(51, 50, 50, 0.5)
+	display: flex
+	border-radius: 15px
+	color: $blackColor
+	font-family: "bold"
+	span
+		display: inline-block
+		margin: auto
+	.preloader:after
+		background-color: #edeffb
+	&.dragged
+		opacity: 0.8
+/*-dragdrop-upload-*/

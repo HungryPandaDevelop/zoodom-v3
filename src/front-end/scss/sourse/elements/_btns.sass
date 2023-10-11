@@ -1,0 +1,177 @@
+.btn
+	background: none
+	text-decoration: none
+	border: 1px solid
+	border-color: $whiteColor
+	border-radius: 30px
+	background-color: $whiteColor
+	padding: 3px 13px
+	font: inherit
+	display: inline-block
+	cursor: pointer
+	text-align: center
+	font-size: $standartSize
+	font-weight: 500
+	transition: ease-out 0.25s
+	min-width: 180px
+	display: inline-block
+	i,em
+		font-style: normal
+
+.btn--black
+	background-color: $blackColor
+	border-color: $blackColor
+	color: $whiteColor
+	&:hover
+		background: $greenColor
+		color: $whiteColor
+		border-color: $greenColor
+.btn--black-border
+	background: none
+	border-color: $blackColor
+	color: $blackColor
+	&:hover
+		background: $blackColor
+		color: $whiteColor
+		border-color: $blackColor
+.btn--white
+	background-color: $whiteColor
+	border-color: $whiteColor
+	color: $blackColor
+	box-shadow: $shadowOne
+	&:hover
+		background: $orangeColor
+		color: $whiteColor
+		border-color: $orangeColor
+.btn--white-border
+	background: none
+	border-color: $whiteColor
+	color: $whiteColor
+	&:hover
+		background: $whiteColor
+		color: $greenColorSecond
+		border-color: $whiteColor
+
+.btn--orange
+	background-color: $orangeColor
+	border-color: $orangeColor
+	color: $whiteColor
+	&:hover
+		background: $whiteColor
+		color: $blackColor
+		border-color: $orangeColor
+.btn--orange-border
+	background: none
+	border-color: $orangeColor
+	color: $orangeColor
+	&:hover
+		background: $orangeColor
+		color: $whiteColor
+		border-color: $orangeColor
+.btn--red
+	background-color: $redColor
+	border-color: $redColor
+	color: $whiteColor
+	&:hover
+		background: $whiteColor
+		color: $blackColor
+		border-color: $redColor
+.btn--red-border
+	background: none
+	border-color: $redColor
+	color: $blackColor
+	&:hover
+		background: $redColor
+		color: $whiteColor
+.btn--green
+	background-color: $greenColor
+	border-color: $greenColor
+	color: $whiteColor
+	&:hover
+		background-color: $whiteColor
+		color: $greenColor
+.btn--green-border
+	background: none
+	border-color: $greenColor
+	color: $greenColor
+	&.active,
+	&:hover
+		background-color: $greenColor
+		color: $whiteColor
+.btn--blue
+	background-color: $blueColor
+	border-color: $blueColor
+	color: $whiteColor
+	&:hover
+		background-color: $whiteColor
+		color: $blueColor
+.btn--blue-border
+	background: none
+	border-color: $blueColor
+	color: $blueColor
+	&.active,
+	&:hover
+		background-color: $blueColor
+		color: $whiteColor
+
+.link
+
+	font-size: $standartSize
+	color: $grayColorSecond
+	cursor: pointer
+	&:hover
+		color: $blueColor
+
+/*tags*/
+.tags
+	a
+		margin-right: 15px
+		text-decoration: none
+		padding: 5px
+		background-color: $grayColorSecond
+		&:hover
+			background-color: $yellowColor
+			color: $blackColor
+
+.switch-container
+	span,
+	.switch-btn
+		vertical-align: middle
+	input
+		height: 0
+		opacity: 0
+		position: absolute
+		width: 0
+.switch-btn
+	border: 1px solid
+	width: 50px
+	height: 25px
+	border-radius: 15px
+	cursor: pointer
+	display: inline-block
+	margin: 0 9px
+	font-size: $smallSize
+	span,i,a
+		vertical-align: middle
+		text-decoration: none
+	i, a
+		position: relative
+		margin: 2px
+		display: block
+		width: calc(50% - 5px)
+		height: calc(100% - 4px)
+		background-color: $blackColor
+		border-radius: 100%
+		left: 0
+		transition: ease-out 0.25s
+.switch-btn--white
+	border-color: $whiteColor
+	i, a
+		background-color: $whiteColor
+.switch-btn--blue
+	border-color: $blueColor
+	i,a
+		background-color: $blueColor
+.switch-btn--active
+	i,a
+		left: 50%

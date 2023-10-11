@@ -1,0 +1,90 @@
+
+.сards-company-logo
+  img
+    width: 100%
+    height: auto
+    object-fit: cover
+.cards-char-logo-info
+  margin-right: auto
+  margin-left: 30px
+.cards-company-name
+  font-size: 28px
+  color: $blackColor
+  // margin-bottom: 30px
+  min-height: 86px
+.cards-company-info
+  .main-grid
+    gap: 0
+.cards-company-contacts,
+.promo-info
+  .promo-item-type
+    position: relative
+    width: 100%
+    text-align: center
+    font-size: 16px
+  .promo-price
+    b
+      margin-right: 10px
+      display: inline-block
+  h3
+    font-size: 18px
+    margin-bottom: 8px
+  li
+    font-size: $standartSize
+    color: $blackColor
+    font-weight: 700
+    margin-bottom: 4px
+    display: flex
+    justify-content: space-between
+    // border-bottom: 1px dotted $grayColor
+    margin-bottom: 8px
+    h3
+      // color: $grayColor
+      font-size: $standartSize
+      font-family: "regular"
+      display: inline-block
+      margin-right: 8px
+    h3,span
+      display: inline-block
+      margin-bottom: -4px
+      // background-color: #f9f9fa
+
+  .cards-company-social
+    border: 0
+    margin-top: 15px
+    display: block
+    display: flex
+    h3
+      margin: 0 15px 8px 0
+      display: inline-block
+    .social
+      font-size: 0
+      display: inline-block
+      text-align: right
+  span
+    text-align: right
+  b
+    display: block
+.cards-company-contacts
+  span
+    b
+      font-family: "regular"
+.promo-info-footer
+  display: flex
+  margin-top: 45px
+  justify-content: space-between
+.promo-price
+  font-size: 21px
+  font-weight: 'bold'
+  color: $blueColor
+  padding-top: 4px
+
+@media (max-width: 768px)
+  .cards-company-contacts
+    li
+      display: block
+      margin: 0 0 15px
+    li span
+      text-align: left
+      display: block
+      font-size: 14px

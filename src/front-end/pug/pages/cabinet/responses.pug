@@ -1,0 +1,61 @@
+include ../../default/build-header
+		
+// header end
+.stub
+
++roofContent("Кабинет")
+	.main-grid
+		.col-3.col-sm-12
+			include ../../components/cabinet-nav.pug
+		.col-9.col-sm-12
+			.cards-account-container.cabinet-account.shadow-container
+				table
+					thead 
+						tr.cards-account-head
+							th
+								b Вакансии
+							th
+								b Дата
+							th
+								b Статус
+							th
+								b Действия
+					tbody
+						tr
+							td
+								.cards-account-topic
+									a(href="#") Старший Кондитер
+							td
+								.cards-date 26.01.2022
+							td
+								.status-btn-container
+									.status-btn.status-btn--roger.active Согласен
+									.status-btn.status-btn--turnoff Отказать
+									.status-btn.status-btn--considered Рассматривается
+							td
+								.btn-container
+									.table-btn.table-btn--delete
+										span Удалить
+						tr
+							td
+								.cards-account-topic
+									a(href="#") Повар-официант
+							td
+								.cards-date 15.01.2022
+							td
+								.status-btn-container
+									.status-btn.status-btn--roger.active Согласен
+									.status-btn.status-btn--turnoff Отказать
+									.status-btn.status-btn--considered Рассматривается
+							td
+								.btn-container
+									.table-btn.table-btn--delete
+										span Удалить
+				.cards-account-item.main-grid
+			
+// footer start  
+.stub
+
+include ../../blocks/footer.pug
+
+// footer end 

@@ -1,0 +1,176 @@
+.detail-bottom
+  padding: 45px 0 30px
+  .social-container
+    width: 100%
+    text-align: right
+    h3
+      color: $greenColor
+      margin: 0 0 5px
+      font-size: inherit
+      font-weight: 500
+.recent-items
+  h2
+    font-size: $mediumSize
+    margin: 0 0 30px
+.rew-default-container
+  .main-grid
+    padding: 0
+  .num-offset
+    display: none
+  .btn-container
+    display: flex
+    gap: 30px
+    padding: 0
+    margin: 0
+    position: relative
+  .btn
+    margin: auto 0 auto auto
+.popup-rew-auth
+  position: absolute
+  width: 500px
+  font-size: 14px
+  padding: 15px
+  background-color: #dce7ff
+  z-index: 2
+  border-radius: 8px
+  left: 50%
+  top: 50%
+  transform: translateX(-50%) translateY(-50%)
+  .btn
+    padding: 5px
+    font-size: inherit
+.rew-hint-send
+  margin-top: 15px
+.reviews-detail
+  margin-top: 45px
+  h2
+    font-weight: 400
+    font-size: 24px
+    margin: 0 0 30px
+  .form-btn-container
+    text-align: right
+.reviews-list
+  .navigation
+    display: flex
+    justify-content: space-between
+    a
+      text-decoration: none
+      &:hover
+        color: $greenColor
+.reviews-item
+  padding: 15px
+  // margin-bottom: 30px
+  border-top: 1px solid $grayColor
+  // background-color: #dce7ff
+  max-width: 930px
+  .main-grid
+    padding: 0
+  h2
+    font-size: $standartSize
+    margin: 0 30px 0 0
+    display: inline-block
+  h3
+    font-size: $smallSize
+    font-weight: 400
+    display: inline-block
+    color: $grayColor
+  .reviews-name
+    display: inline-block
+    text-align: left
+    vertical-align: middle
+  .reviews-text
+    font-size: $smallSize
+.reviews-info
+  text-align: center
+.reviews-roof
+  display: flex
+  justify-content: space-between
+  margin-bottom: 12px
+.reviews-img
+  width: 48px
+  height: 48px
+  border-radius: 100%
+  background-color: #e5efff
+  overflow: hidden
+  position: relative
+  display: inline-block
+  margin-right: 30px
+  vertical-align: top
+  margin: 0 0 15px
+  vertical-align: middle
+  color: $whiteColor
+  font-family: "bold"
+  line-height: 53px
+  font-size: 24px
+.reviews-stars-container
+  width: 90px
+  text-align: right
+  margin-top: -2px
+.reviews-stars
+  margin: 0 0 0px
+  display: flex
+  justify-content: space-between
+  color: $grayColor
+  label
+    margin: 0
+.reviews-date
+  margin-left: auto
+.star-ico
+  display: inline-block
+  @include icoEl(16px, 16px, '../images/icons/star-blue.svg')
+  cursor: pointer
+  &.active,
+  &:hover
+    background-image: url("../images/icons/star-fill-blue.svg")
+.star-ico--green
+  display: inline-block
+  @include icoEl(16px, 16px, '../images/icons/star-black.svg')
+  cursor: pointer
+  &.active,
+  &:hover
+    background-image: url("../images/icons/star-fill-black.svg")
+
+.input-stars
+  position: absolute
+  opacity: 0
+  left: 0
+.title-rew-small
+  h3
+    font-size: 16px
+    margin: 0
+@media (max-width: 1280px)
+  .reviews-img
+    width: 60px
+    height: 60px
+  .star-ico
+    width: 18px
+    height: 18px
+@media (max-width: 992px)
+  .reviews-detail h2
+    font-size: 21px
+  .rew-switch
+    margin-bottom: 15px
+  .rew-default-container
+    .btn-container
+      grid-column-start: 1
+    .btn
+      margin: 0
+@media (max-width: 576px)
+  .reviews-detail
+    h2
+      margin-bottom: 15px
+  .reviews-roof
+    display: block
+    h2
+      margin: 0
+  .reviews-stars-container
+    width: 50%
+    text-align: right
+    margin-top: 0
+  .reviews-item
+    .reviews-stars-container
+      width: 100%
+      margin-top: -20px
+@media print
+  .reviews-detail
+    padding: 0 15px

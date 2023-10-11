@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import axios from "axios";
 import { useParams } from 'react-router-dom';
-
+import Share from "pages/promo/parts/Share";
 import Reviews from 'pages/catalog/parts/cardsDetail/Reviews';
 import Meta from 'pages/parts/Meta';
 import BreedAdv from 'pages/breeds/breedsDetail/BreedAdv';
@@ -144,6 +144,7 @@ const Breeds = () => {
               <BreedAdv listings={listings} breedsCategory={params.breedsCategory} />
 
               <PageNav breedsCategory={params.breedsCategory} />
+              <Share listing={listings} typeBreeds={params.breedsCategory} />
             </div>
 
           </div>

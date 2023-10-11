@@ -1,0 +1,36 @@
+include ../../default/build-header
+		
+// header end
+.stub
++roofContent("Американский булли")
+	.main-grid.breed-main
+		.col-6
+			.breed-slider
+				.breed-slider-main
+					.owl-carousel#big
+						-for(x=0;x<5;x++)
+							.breed-slider-main-item.img-cover
+								img(src="/images/temp/1.jpg", alt="")
+					#thumbs.owl-carousel
+						-for(x=0;x<5;x++)
+							.breed-slider-add-item.img-cover
+								img(src="/images/temp/1.jpg", alt="")
+		.col-1
+		.col-5
+			.breed-adv 
+				-for(x=1;x<6;x++)
+					.breed-adv-item 
+						.breed-adv-item-img
+							img(src="/images/adv/"+x+".svg", alt="")
+						.breed-adv-item-info
+							h3 Назначение
+							h4 Охрана
+	.main-full.breed-description 
+		h3 Описание
+		p Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque recusandae harum quidem sed possimus voluptatum maxime. Commodi nesciunt consequatur non quas animi dolores? Eaque error amet, repellat totam aliquid libero!
+
+// footer start  
+.stub
+include ../../blocks/footer.pug
+
+// footer end 

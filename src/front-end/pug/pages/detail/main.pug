@@ -1,0 +1,32 @@
+.detail-main
+	.main-full.btn-top-container
+		a.ico-in.btn-back(href="#")
+			i
+				img.back-ico(src="/images/arrows/arrow-left-green.svg", alt="")
+				img.front-ico(src="/images/arrows/arrow-left-black.svg", alt="")
+			span Вернуться 
+	.main-grid
+		.detail-slider.col-6
+			.owl-detail-main.owl-carousel
+				each val,index in ["","",""]
+					.slider-item.img-cover
+							img(src="/images/temp/"+(index+1)+".jpg", alt="")
+		.detail-about.col-6
+			div
+				.detail-roof
+					.detail-data
+						span 10/10/10
+					.detail-viev
+						i
+							img(src="/images/icons/view-black.svg", alt="")
+						span Просмотры
+						b 99
+				h2 Detail page 
+				p Lorem ipsum dolor sit amet consectetur adipisicing elit. Id impedit animi rerum praesentium commodi molestiae quia laudantium deserunt fugiat obcaecati aliquam voluptatem, similique alias eius, cumque, architecto non delectus. Rerum?
+
+			.detail-links
+				.tags
+					a(href="#") News 
+					a(href="#") Last 
+					a(href="#") Custom 
+				+social(["v","tl","i","wz","g","y"])

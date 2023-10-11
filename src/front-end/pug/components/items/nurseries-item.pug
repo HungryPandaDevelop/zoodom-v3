@@ -1,0 +1,16 @@
+mixin nurseriesItem(name, text, data)
+	.nurseries-item
+		a(href="#").nurseries-item-img
+			.img-cover
+				img(src="/images/temp/1.jpg", alt="")
+			.nurseries-raiting 
+				i 
+				span 4.8 
+				em | 200 отзывов
+		.nurseries-item-info
+			h3
+				a(href="#")=name
+			.nurseries-item-text=text
+			.nurseries-address 
+				b Адрес:
+				span Окская 48/2

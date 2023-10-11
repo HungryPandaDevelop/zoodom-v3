@@ -1,0 +1,23 @@
+header
+	.header-bg
+	.main-grid
+		.vertical-align.col-5
+			a.logo(href="#") 
+				|ZOODOM
+			a(href="#").hamburger-btn.element-btn(data-element="0")
+			include header/city-select.pug
+			include header/cabinet-header.pug
+		.vertical-align.col-6
+			ul.ln.nav-header
+				each val in ["Товары", "Услуги", "Питомники", "Веклиники"]
+					li 
+						a(href="#")= val
+			ul.ln.nav-header
+				each val in ["Акции", "Новости",  "Контакты"]
+					li 
+						a(href="#")= val
+
+		.vertical-align.col-1
+			a(href="#").search-btn
+			a(href="#").basket-btn
+		.header-line

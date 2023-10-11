@@ -1,0 +1,18 @@
+include ../../default/build-header
+		
+// header end
+.stub
+
++roofContent("Акции")
+	.main-grid.main-grid-indent
+		-for(var i=0;i<8;i++)
+			.col-3
+				+salesItem("Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum","Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum",)
+	.main-full 
+		+pagination()
+	include ../home/feedback.pug
+// footer start  
+
+include ../../blocks/footer.pug
+
+// footer end  

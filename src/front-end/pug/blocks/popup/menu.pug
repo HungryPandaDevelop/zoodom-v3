@@ -1,0 +1,18 @@
++popup-template(0, 'menu-hamburger')
+	nav.popup-nav
+		ul.ln
+			each val in ["Главная", "Новости","О компании","Контакты"]
+				li
+						a(href="#")= val
+	.popup-feedback
+		.container
+			.feedback-phone
+				a(href="tel:+88005559810" ) +7 (777) 777 - 77 - 77
+			.feedback-social
+			+social(["v","tl","wz"]) 
+	.popup-bottom
+		.logo-container
+			a.logo(href="./index.html")
+				img(src="/images/logo.jpg")
+		.copyright
+			|Lorem ipsum dolor sit amet consectetur adipisicing elit. Id aut beatae numquam, eligendi nam fuga incidunt cupiditate iste fugiat ea sint possimus. Recusandae dolorem inventore esse porro enim similique dicta!

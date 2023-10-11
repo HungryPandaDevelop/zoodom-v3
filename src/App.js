@@ -14,6 +14,8 @@ import Demo from 'pages/Demo';
 import Search from 'pages/Search';
 
 import Breeds from 'pages/breeds/Breeds';
+import BreedsDog from 'pages/breeds/BreedsDog';
+import BreedsCat from 'pages/breeds/BreedsCat';
 
 import BreedsDetail from 'pages/breeds/BreedsDetail';
 
@@ -79,7 +81,8 @@ const App = () => {
           <Route path='/' exept element={<MainPage/>} ></Route>
           <Route path='/demo' element={<Demo/>} ></Route>
 
-          <Route path='/porodi-:breedsCategory/' element={<Breeds/>} ></Route>
+          <Route path='/porodi-sobak/' element={<BreedsDog/>} ></Route>
+          <Route path='/porodi-koshki/' element={<BreedsCat/>} ></Route>
    
           <Route path='/porodi-:breedsCategory/:breedsID.html' element={<BreedsDetail/>} ></Route>
 

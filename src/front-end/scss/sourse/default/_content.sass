@@ -1,0 +1,133 @@
+
+$gridCount: 12
+$indent: 15px
+$maxWidth: 1640px
+$gap: 30px
+
+.main-grid
+	display: grid
+	grid-template-columns: repeat($gridCount, 1fr)
+	grid-column-gap: $gap
+	padding: 0 $indent
+	max-width: $maxWidth
+	margin: 0 auto
+	.main-grid
+		padding: 0
+	.main-full
+		padding: 0
+.form-grid
+	display: grid
+	grid-template-columns: repeat($gridCount, 1fr)
+	grid-column-gap: $gap
+
+.catalog-grid
+	display: grid
+	grid-template-columns: repeat($gridCount, 1fr)
+	gap: 60px $gap
+	padding: 0 $indent
+	max-width: $maxWidth
+	margin: 0 auto
+
+.main-full
+	padding: 0 $indent
+	max-width: $maxWidth
+	margin: 0 auto
+	.main-grid
+		padding: 0
+	.main-full
+		padding: 0
+section
+	padding: 60px 0 15px
+	position: relative
+	overflow: hidden
+
+.subtitle-section
+	font-size: $mediumSize
+	color: $grayColor
+	margin: 0
+	font-family: "regular"
+.head-section
+	.btn-container
+		text-align: right
+		a
+			color: $blueColor
+			text-decoration: none
+			&:hover
+				text-decoration: underline
+.btn-container-section
+	padding: 30px 0 15px
+	text-align: center
+
+.breadcrumbs
+	padding: 15px 0 15px
+	color: $blackColor
+	em, span
+		vertical-align: middle
+	em
+		// font-size: 0
+		// margin-left: 5px
+		// @include icoEl(20px, 20px, "../images/arrows/carret-right-gray.svg", middle, 130%)
+		vertical-align: middle
+		position: relative
+		top: -1px
+		display: inline-block
+		margin: 0 4px
+	span
+		span
+			color: $blueColor
+	a
+		text-decoration: none
+		color: $blackColor
+		vertical-align: middle
+		&:hover
+			text-decoration: underline
+	span
+		vertical-align: middle
+		// margin: 0 5px
+		&:first-child
+			margin-left: 0
+.content
+	position: relative
+	min-height: calc(100vh - 130px)
+	h1
+		font-size: 48px
+		padding: 30px 0 5px 45px
+		color: $blueColor
+		position: relative
+		&::before
+			content: ''
+			@include positionElement(32px,32px,0,37px)
+			@include bgImageEl("../images/icons/cube-blue.svg")
+
+/*detail end*/
+/*detail end*/
+@media (max-width: 1024px)
+	section
+		padding: 25px 0 15px
+		.title-section
+			font-size: $largeSize
+@media (max-width: 576px)
+	.content h1
+		font-size: 20px
+		padding: 9px 0 20px 45px
+		line-height: 1
+		&::before
+			top: 11px
+
+	section
+		.title-section
+			font-size: $largeSize
+			margin: 0 0 0px
+	.btn-container_section
+		.btn
+			margin: 0 0 15px
+	.breadcrumbs
+		padding: 8px 0 8px
+		font-size: 14px
+
+	.content
+		min-height: calc(100vh - 270px)
+
+@media (max-width: 320px)
+	.main-grid
+		grid-column-gap: 0

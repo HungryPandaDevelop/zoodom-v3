@@ -1,0 +1,109 @@
+include ../../default/build-header
+		
+// header end
+.stub
++roofContent("Вакансия детально")
+	.main-full
+		.cards-main.shadow-container
+			.main-grid.cards-item-roof
+				.col-12.cards-update
+						span Резюме обновлено: 26.01.2022
+			.main-grid
+				.col-2.col-md-3.col-sm-4.col-xs-12
+					.cards-face-container
+						.cards-face
+							img(src="/images/temp/avatar-1.jpg", alt="")
+
+				.col-6.col-xxl-5.col-md-9.col-sm-8.col-xs-12.cards-item-info-container
+					.cards-item-info
+						.cards-item-info-top
+							h3 Старший повар на постоянной основе
+							.cards-item-price 
+								b P 100 000 
+								span Полный день
+						ul.ln.cards-item-bottom
+							li
+								span Опыт работы: 
+								b 3 года 3 месяца
+							li 
+								span Последнее место работы: 
+								b Старший повар, Повар горячего цеха
+							li 
+								span Гражданство: 
+								b Россия
+							li 
+								span Возраст: 
+								b 35
+					.cards-item-delimetr
+				.col-4.col-xxl-5.col-md-9.col-sm-8.col-xs-12.cards-pay-container
+					.cards-item-info.cards-item-pay-info
+						h3 Ирина Владимирована Кондакова
+						ul.ln.cards-item-info-list
+							li 
+								img(src="/images/icons/phone-green.svg", alt="")
+								a(href="#") +7 (985) 282-65-32 
+							li
+								img(src="/images/icons/mail-green.svg", alt="")
+								a(href="#") info@yandex.ru 
+							li
+								img(src="/images/icons/marker-green.svg", alt="")
+								b Окская улица, 48/2, Москва,
+
+		.cards-about 
+			.cards-about-item
+				h3 График и место работы:
+				p Постоянный рабочий день, частичная занятость, свободный график, частичная занятость, удаленная работа, вахта Москва, Санкт-Петербург, Самара, Екатеринбург, Ульяновск, и еще 33 города
+			.cards-about-item
+				h3 Опыт работы 15 лет и 6 месяцев
+				.cards-about-line 
+					h4 Июнь 2018 - По настоящее время / 10 месяцев
+					h5 Суповых дел мастер / ООО “Ромашка”
+					p Готовила пельмени Варища борщ для семейной пары С самого детства без памяти любила варить супы и всякие жидкие смеси
+				.cards-about-line 
+					h4 Июнь 2018 - По настоящее время / 10 месяцев
+					h5 Суповых дел мастер / ООО “Ромашка”
+					p Готовила пельмени Варища борщ для семейной пары С самого детства без памяти любила варить супы и всякие жидкие смеси
+				.cards-about-line 
+					h4 Июнь 2018 - По настоящее время / 10 месяцев
+					h5 Суповых дел мастер / ООО “Ромашка”
+					p Готовила пельмени Варища борщ для семейной пары С самого детства без памяти любила варить супы и всякие жидкие смеси
+			.cards-about-item 
+				h3 Профессиональные образование
+				.cards-about-line
+					h4 Июнь 2018 - По настоящее время / 10 месяцев
+					h5 Специальность: Конфетчица / Кондитерское училище номер 15г. Санкт-Петербург
+				.cards-about-line
+					h4 Июнь 2018 - По настоящее время / 10 месяцев
+					h5 Специальность: Конфетчица / Кондитерское училище номер 15г. Санкт-Петербург
+			.cards-about-item
+				h3 Обо мне
+				p Пунктуален, порядочен, алкоголь - нет, курение - нет. Военный пенсионер. С 1980 г. по 1998 год - военный (связь).
+
+		.reviews-detail
+					.main-grid
+						.col-6
+							h2 Отзывы:
+							.reviews-list
+								+reviewsItem("Alex But","10/10/10") 
+								+reviewsItem("Nanci Dri","12/12/22") 
+						.col-6
+							h2 Оценка:
+							.reviews-form
+								.reviews-stars
+									.reviews-stars-container
+										i.star-ico.star-ico--gray
+										i.star-ico.star-ico--gray
+										i.star-ico.star-ico--gray
+										i.star-ico.star-ico--gray
+										i.star-ico.star-ico--gray
+								form.form-default
+									.form-line
+										+inputTextarea('Ваше сообщение')
+									.form-line 
+										+inputSubmit('Оставить отзыв', 'btn--orange')
+
+// footer start  
+.stub
+include ../../blocks/footer.pug
+
+// footer end 

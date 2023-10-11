@@ -1,0 +1,12 @@
+section.feedback-home
+	.main-full.head-section
+		h2.title-section 
+			| Подписка
+		h3.subtitle-section Подпишись на получение последних курьёзов и новостей от наших питомцев
+		.feedback-hint *Поля со звездочкой обязательны для заполнения
+	.main-grid.form-default
+		+inputText('Ваше имя','form-line col-4')
+		+inputEmail('Ваш Email','form-line col-4')
+		+inputPhone('Ваш телефон','form-line col-4')
+		+inputCheckbox(false,['Я даю свое согласие на обработку персональных данных'], 'form-line col-12 agreement')
+		+inputSubmit('Отправить', 'btn--blue')

@@ -1,0 +1,47 @@
+footer
+  .main-grid
+    .footer-info.col-3.col-md-12
+      .logo-container
+        a.logo(href="./index.html")
+          | zoodom
+      .logo-text 
+        | Компания "Zoodom Russia"
+      .address.
+        Москва, 102250<br> 15-парковая 29к8,<br> офис 112
+      .cooperation
+        b Заявка на сотрудничество
+        a(href="#") partner@zoodom.ru
+      +social(["vw","tlw","wzw"])
+    nav.nav-1.col-2.col-md-4.col-xs-12
+      h3 Товары дня:
+      ul
+        each val in ["Подбор персонала","Поиск работы","Помощь рекрутера"]
+          li  
+            a(href="#") 
+              = val
+    nav.nav-2.col-2.col-md-4.col-xs-12
+      h3 Услуги дня:
+      ul
+        each val in ["Работодателям","Соискателям","Рекламодателям"]
+          li  
+            a(href="#") 
+              = val
+    nav.nav-3.col-2.col-md-4.col-xs-12
+      h3 Портал
+      ul
+        each val in ["О нас","Политика","Контакты"]
+          li  
+            a(href="#") 
+              = val 
+    .col-3.nav-3
+      ul
+        each val in ["Производители","Магазины","Статьи","Видео"]
+          li  
+            a(href="#") 
+              = val 
+    .col-12.footer-bottom
+      .copyright @2023 Zoodom. Все права защищены.
+      a(href="#") Политика конфиденциальности
+      a(href="#") 
+        |Создание сайта Style You
+

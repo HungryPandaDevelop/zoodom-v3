@@ -1,0 +1,51 @@
+.contacts-items-container
+  margin-bottom: 60px
+.contacts-item
+  h3
+    font-size: $mediumSize
+    margin: 0 0 10px
+  a
+    text-decoration: none
+    padding-bottom: 2px
+    border-bottom: 1px solid $blackColor
+    margin: 0 0 10px
+    color: $greenColor
+    font-weight: 300
+    &:hover
+      color: $blackColor
+.contacts-item-img
+  text-align: center
+  margin: 0 0 15px
+  font-size: 0
+  img
+    width: 60px
+.contacts-info-container
+  margin-bottom: 45px
+.contacts-info
+  font-size: $smallSize
+  h2
+    font-size: $mediumSize
+    margin: 0 0 30px
+  p
+    margin: 0
+.contacts-info-line
+  margin: 0 0 30px
+
+@media (max-width: 768px)
+  .contacts-info
+    display: grid
+    grid-template-columns: repeat(2,1fr)
+    grid-gap: 30px
+    h2
+      grid-column: span 2
+  .contacts-item
+    margin-bottom: 45px
+    h3
+      height: auto
+@media (max-width: 576px)
+  .contacts-container
+    margin-bottom: 30px
+
+  .contacts-item
+    max-width: none
+    margin-bottom: 15px

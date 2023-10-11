@@ -1,0 +1,9 @@
+mixin contactsItem(  name,text, img, link  )
+	.contacts-item.col-3.col-sm-6.col-xs-12
+		.contacts-item-img 
+			img(src= img, alt="")
+		h3= name
+		if link
+			a(href="#").contacts-item-description= text
+		else 
+			.contacts-item-description= text

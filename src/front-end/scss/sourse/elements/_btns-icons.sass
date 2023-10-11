@@ -1,0 +1,89 @@
+
+.close-btn
+	@include icoEl(45px, 45px, "../images/icons/close-black.svg")
+	cursor: pointer
+
+.hamburger-btn
+	@include icoEl(30px, 30px, "../images/icons/hamburger-gray.svg")
+	cursor: pointer
+
+.search-btn
+	@include icoEl(30px,30px, "../images/icons/loop-white.svg")
+	&:hover
+		background-image: url("../images/icons/loop-orange.svg")
+.basket-btn
+	@include icoEl(32px,32px, "../images/icons/basket-white.svg")
+	&:hover
+		background-image: url("../images/icons/basket-orange.svg")
+
+.top-btn
+	background-color: $blueColor
+	@include positionElement(60px,60px,30px, 60px, right, bottom, 2, fixed)
+	@include bgImageEl("../images/arrows/carret-up-white.svg", 60px)
+	cursor: pointer
+	border-radius: 100%
+	&:hover
+		background-color: $blueColorSecond
+.btn-back
+	&:hover
+		color: $greenColor
+
+.btn-edit
+	i
+		@include icoEl(20px,20px, "../images/cabinet/edit-white.svg")
+	&:hover
+		i
+			background-image: url("../images/cabinet/edit-blue.svg")
+.btn-delete-profile
+	i
+		@include icoEl(20px,20px, "../images/cabinet/trash-white.svg")
+	&:hover
+		i
+			background-image: url("../images/cabinet/trash-red.svg")
+.btn-save
+	i
+		@include icoEl(20px,20px, "../images/cabinet/save-white.svg")
+	&:hover
+		i
+			background-image: url("../images/cabinet/save-blue.svg")
+.btn-cancel
+	border-color: $redColor
+	i
+		@include icoEl(20px,20px, "../images/cabinet/cancel-red.svg")
+	&:hover
+		background-color: $redColor
+		color: $whiteColor
+		i
+			background-image: url("../images/cabinet/cancel-white.svg")
+.cabinet-add-cards
+	i
+		@include icoEl(20px,20px, "../images/cabinet/cabinet-add-cards-white.svg")
+	&:hover
+		i
+			background-image: url("../images/cabinet/cabinet-add-cards-blue.svg")
+.btn-add
+	i
+		@include icoEl(20px,20px, "../images/cabinet/cabinet-add-cards-blue.svg")
+	&:hover
+		i
+			background-image: url("../images/cabinet/cabinet-add-cards-white.svg")
+.btn-header
+	display: inline-block
+	border: 1px solid $whiteColor
+	border-radius: 100%
+	width: 30px
+	height: 30px
+	margin-right: 15px
+	cursor: pointer
+	background-size: 80%
+	background-position: center
+	position: relative
+	&:hover
+		background-color: $orangeColor
+		border-color: $orangeColor
+.btn-header-cards
+	background-image: url("../images/icons/add-doc-white.svg")
+.btn-header-chat
+	background-image: url("../images/icons/chat-white.svg")
+.btn-header-favorites
+	background-image: url("../images/icons/star-white.svg")

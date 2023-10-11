@@ -1,0 +1,18 @@
+include ../../default/build-header
+		
+// header end
+.stub
+
++roofContent("Питомники")
+	.catalog-grid
+		-for(var i=0;i<8;i++)
+			.col-3
+				+nurseriesItem("Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum","Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum",)
+	.main-full 
+		+pagination()
+	include ../home/feedback.pug
+// footer start  
+
+include ../../blocks/footer.pug
+
+// footer end  

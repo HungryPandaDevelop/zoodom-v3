@@ -1,0 +1,82 @@
+include ../../default/build-header
+		
+// header end
+.stub
++roofContent("VetMeD Clinic")
+	.main-grid.nurseries-main
+		.col-5
+			.nurseries-main-img-container
+				.nurseries-main-img
+					img(src="/images/temp/4.jpg", alt="")
+				.nurseries-main-reviews 
+					.nurseries-main-reviews-container
+						h3 Оцените нашу работу
+						.reviews-stars
+							.reviews-stars-container
+								i.star-ico.star-ico--green
+								i.star-ico.star-ico--green
+								i.star-ico.star-ico--green
+								i.star-ico.star-ico--green
+								i.star-ico.star-ico--green
+							.reviews-stars-total 4.8
+
+					.btn-container 
+						a.btn.btn--green-border(href="#") Оставить отзыв
+		.col-4
+			.nurseries-main-about
+				h3 О нас
+				p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet quae officia necessitatibus earum obcaecati ab aliquam doloremque, odit voluptatum asperiores hic sint cum eum, repellat, deserunt commodi ea cumque qui!
+				p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet quae officia necessitatibus earum obcaecati ab aliquam doloremque, odit voluptatum asperiores hic sint cum eum, repellat, deserunt commodi ea cumque qui!
+
+		.col-3
+			.nurseries-main-info
+				.nurseries-main-info-item
+					h3 Адрес
+					div Москва, Кутузовский пр. к.36 д 23
+				.nurseries-main-info-item
+					h3 Контактный номер
+					div 
+						a(href="#") +7 916 884 22 33
+				.nurseries-main-info-item
+					h3 Email
+					div 
+						a(href="#") mail@mail
+	section.nurseries-gallery
+		.main-full.head-section
+			h2.title-section 
+				| Галерея
+		.catalog-grid
+			-for (x=0; x< 5; x++)
+				.col-4
+					.nurseries-gallery-item.img-cover
+						img(src="/images/temp/4.jpg", alt="")
+			.col-4
+				.nurseries-gallery-item.nurseries-gallery-btn
+					div
+						b +5
+						span Смотреть все фото
+	section.announcement
+		.main-full.head-section
+			h2.title-section 
+				| Объявления
+		.catalog-grid
+			-for (x=0; x< 5; x++)
+				.col-4
+					.announcement-item
+						a(href="#").announcement-item-img.img-cover
+							img(src="/images/temp/4.jpg", alt="")
+						h3 Кошки:
+						.announcement-item-info Русская голубая; Девочка, 2 года
+						.announcement-item-description Lorem ipsum dolor sit amet consectetur adipisicing elit.
+						.announcement-item-date 
+							b Дате рождения:
+							span 05.06.2019
+
+	include ../detail/reviews.pug
+	include ../detail/news-last.pug
+	include ../home/feedback.pug
+// footer start  
+.stub
+include ../../blocks/footer.pug
+
+// footer end 

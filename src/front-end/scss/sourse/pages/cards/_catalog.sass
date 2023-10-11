@@ -1,0 +1,118 @@
+.catalog-btn-box
+	text-align: right
+	padding: 15px
+.catalog-btn-container
+	border: 1px solid $blueColor
+	display: inline-block
+	border-radius: 30px
+	position: relative
+	overflow: hidden
+	.catalog-btn
+		padding: 8px 30px
+		text-decoration: none
+		&.active
+			background-color: $blueColor
+			color: $whiteColor
+	.btn-map-filters
+		border-right: 1px solid $blueColor
+.cards-item
+	// margin: 0 0 60px
+
+	color: $blackColor
+	a
+		font-weight: 700
+		text-decoration: none
+		&:hover
+			color: $blueColor
+	h3
+		font-size: inherit
+		// font-weight: 400
+		margin: 15px 0 15px
+		a
+			display: -webkit-box
+			-webkit-line-clamp: 1
+			-webkit-box-orient: vertical
+			line-clamp: 1
+			position: relative
+			overflow: hidden
+			// text-transform: lowercase
+			&::first-letter
+				text-transform: uppercase
+.cards-item-text
+	margin: 0 0 15px
+.cards-address
+	color: $blueColor
+	b
+		font-family: "light"
+		color: inherit
+.cards-item-img
+	height: 250px
+	display: block
+	position: relative
+	overflow: hidden
+	border-radius: 30px
+	.img-cover
+		@include positionElement(100%,100%,0,0)
+		background-color: $whiteColor
+		background-size: cover
+		transform: scale(1)
+		transition: ease-out 0.5s
+		background-position: center
+	img
+		@include positionElement(100%,100%,0,0)
+	&:hover
+		.img-cover
+			transform: scale(1.1)
+.pitomnik-breed-item
+	margin-bottom: 30px
+.promo-item
+	position: relative
+	h3
+		margin-bottom: 0
+		&::first-letter
+			text-transform: uppercase
+.promo-item-roof
+	display: none
+.promo-item-type
+	position: absolute
+	background-color: #A55EFF
+	font-size: 14px
+	padding: 3px 15px 0px
+	left: -5px
+	top: -11px
+	color: #ffffff
+	z-index: 2
+	border-radius: 30px
+.promo-item-type.sale
+.promo-item-type.anons
+	background-color: #EC76CB
+.promo-item-type.knit
+	background-color: #FEAB4A
+.promo-item-type.gift
+	background-color: #ABE155
+.promo-item-bottom
+	display: block
+	// margin-top: 8px
+	justify-content: space-between
+.promo-item-btn
+	margin-top: 15px
+.promo-item-price
+	// font-size: 18px
+	color: $blueColor
+	// padding-top: 8px
+	font-family: "bold"
+.promo-stub-empty
+	width: calc(100% - 110px)
+	height: 300px
+	background-size: 100%
+	background-position: center
+	background-color: $whiteColor
+	border-radius: 30px
+@media (max-width: 992px)
+	.cards-item-img
+		height: 180px
+@media (max-width: 576px)
+	.cards-item-img
+		height: 250px
+	.cards-item
+		margin: 0 0 25px

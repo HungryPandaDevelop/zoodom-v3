@@ -1,0 +1,76 @@
+.cabinet-header
+	// width: 220px
+	*
+		vertical-align: middle
+
+.cabinet-header-avatar
+	display: inline-block
+	width: 38px
+	height: 38px
+	position: relative
+	overflow: hidden
+	cursor: pointer
+	border-radius: 100%
+	border: 1px solid $blackColor
+
+.cabinet-header-avatar.empty
+	background-size: 30px
+	background-position: center
+.cabinet-header-nav
+	display: inline-block
+	span
+		margin: 0 8px
+	*
+		vertical-align: top
+.cabinet-header-avatar-container
+	display: inline-block
+	border-radius: 100%
+	font-size: 0
+	cursor: pointer
+	transition: ease-out 0.5s
+	i
+		@include icoEl(15px,15px, "../images/arrows/carret-down-black.svg", middle, 30px)
+		margin-right: 8px
+
+.sigin-body
+	position: relative
+
+.cabinet-popup
+	@include positionElement(100%,auto, 0px, 50%,)
+	margin-top: 32px
+	background-color: $whiteColor
+	color: $blackColor
+	border-radius: 4px
+	box-shadow: $shadowThree
+	// display: none
+	&::before
+		content: ""
+		@include positionElement(10px,10px,0px,-4px)
+		background-color: $whiteColor
+		transform: rotate(45deg)
+	.btn
+		margin: 0
+		width: 50%
+.cabinet-popup-info
+	padding: 10px 15px 8px
+.cabinet-popup-name
+	font-size: $standartSize
+	font-weight: 500
+	margin: 0 0 3px
+.cabinet-popup-mail
+	color: $grayColor
+
+.cabinet-popup-controls
+	padding: 15px
+	display: flex
+	gap: 15px
+	justify-content: space-between
+	border-top: 1px solid $grayColorSecond
+	.btn
+		font-size: $smallSize
+		min-width: auto
+@media (max-width: 576px)
+	.cabinet-header
+		width: 184px
+	.cabinet-header-container
+		display: none

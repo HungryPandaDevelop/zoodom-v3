@@ -11,9 +11,8 @@ import {
   OKShareButton,
   TelegramShareButton,
   VKShareButton,
-  WhatsappShareButton,
-  FacebookShareButton,
-  FacebookIcon,
+  OKIcon,
+  TelegramIcon,
   VKIcon
 
 } from "react-share";
@@ -122,12 +121,12 @@ const PromosDetail = () => {
                         sertifikat_porodi,
                         sertifikat_pochek,
                         sertifikat_PKdef,
-                        sertifikat_hcm,
+                        // sertifikat_hcm,
                         sertifikat_sma,
                         tituli,
                         ychastie_vistavki,
                         photoParents,
-                        animal,
+                        // animal,
                         sertifikate
                       } = item;
 
@@ -245,22 +244,11 @@ const PromosDetail = () => {
                 )
                 }
               </div>
-              {/* <div className="btn-container">
-                          <div className="btn btn--blue" onClick={() => { setOpenReserve(true); setReservAnimal(currentAnimal); }}>
-                            Заказать {currentAnimal}
-                          </div>
-                        </div> */}
+
             </div>
             <div className="col-3 col-md-4 col-xs-12 ">
-              1111111111111
-              <VKShareButton
-                url={'htps://www.example.com'}
-                quote={'Dummy text!'}
-                hashtag="#muo"
-              >
-                <VKIcon size={32} round />
-              </VKShareButton>
-              111111111
+
+
               <PromoInfo
                 listing={listing}
               />

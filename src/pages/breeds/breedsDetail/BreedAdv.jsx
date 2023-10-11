@@ -67,6 +67,7 @@ const BreedAdv = ({ listings, breedsCategory }) => {
             </>
           )
         }
+
       </>
     )
   }
@@ -165,6 +166,8 @@ const BreedAdv = ({ listings, breedsCategory }) => {
       {/* <div className="btn-container">
         <a href="#" className="btn btn--blue">Купить щенка {listings.title}</a>
       </div> */}
+
+
     </div>
   )
 }

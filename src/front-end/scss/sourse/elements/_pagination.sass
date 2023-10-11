@@ -1,0 +1,91 @@
+/*pagination page start*/
+
+.pagination
+  text-align: center
+  margin: 60px 0 45px
+  padding: 0
+  position: relative
+  z-index: 2
+  li
+    padding: 0
+    margin: 0
+    display: inline-block
+
+  a
+    width: 30px
+    height: 30px
+    display: inline-block
+    text-align: center
+    font-weight: 600
+    text-decoration: none
+    line-height: 30px
+    font-size: $smallSize
+    vertical-align: middle
+    margin: 0 15px
+    border-radius: 100%
+    transition: ease-out 0.25s
+    color: #878787
+    cursor: pointer
+  li:hover a,
+  li.selected a
+    color: $whiteColor
+    background-color: $blueColor
+    transform: scale(1.1)
+
+  .previous,
+  .next
+    a
+      background-size: 100%
+      font-size: 0
+
+    &.disabled
+      opacity: 0
+      visibility: hidden
+
+  .pagination-dotted
+    color: $grayColor
+
+  .previous
+    a
+      @include icoEl(30px, 30px, "../images/arrows/arrow-left-blue.svg")
+      &:hover
+        background-color: $blueColor
+        background-image: url("../images/arrows/arrow-left-white.svg")
+
+  .next
+    a
+      @include icoEl(30px, 30px, "../images/arrows/arrow-right-blue.svg")
+      &:hover
+        background-color: $blueColor
+        background-image: url("../images/arrows/arrow-right-white.svg")
+
+.ico-in
+  i,span
+    vertical-align: middle
+    display: inline-block
+  i
+    font-size: 0
+    position: relative
+
+  .back-ico
+    visibility: hidden
+
+  .front-ico
+    position: absolute
+    left: 0
+    top: 0
+  &.active,
+  &:hover
+    text-decoration: none
+
+    .back-ico
+      visibility: visible
+    .front-ico
+      visibility: hidden
+.ico-in--right
+  i
+    margin-left: 7px
+.ico-in--left
+  i
+    margin-right: 7px
+/*pagination page end*/

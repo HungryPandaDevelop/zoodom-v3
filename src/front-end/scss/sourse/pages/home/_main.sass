@@ -1,0 +1,120 @@
+.main-home
+  height: 100vh
+  min-height: 620px
+  // background-color: $whiteColor
+  position: relative
+  color: $whiteColor
+  overflow: hidden
+  .main-home-tiny
+    @include positionElement(100%,100%,0,0)
+
+  .tns-item
+    background-size: cover
+    height: 100%
+  p
+    margin: 0
+  .main-full
+    padding-top: 160px
+  .btn
+    border: 0
+  h2
+    color: $whiteColor
+    font-size: 96px
+    margin: 0 0 15px
+    i
+      @include icoEl(70px, 70px, '../images/icons/cube-white.svg')
+      margin-right: 15px
+    i,span
+      vertical-align: baseline
+  h3
+    font-size: 48px
+    max-width: 660px
+    line-height: 1
+    font-weight: 700
+    margin: 0 0 30px
+  h4
+    font-size: 20px
+    max-width: 400px
+    margin: 0 0 60px
+.tns-nav
+  position: absolute
+  width: 100%
+  max-width: 1640px
+  left: 50%
+  transform: translateX(-50%)
+  bottom: 30px
+  z-index: 2
+
+  padding: 0 15px
+
+  button
+    border: 0
+    width: 20px
+    height: 20px
+    margin-right: 15px
+    border-radius: 100%
+    border: 0
+    cursor: pointer
+    background-color: rgba($blueColor, 0.25)
+    border: 1px solid rgba($blueColor, 0.25)
+    margin-left: auto
+
+    &:hover,
+    &.tns-nav-active
+      background-color: $blueColor
+      color: $whiteColor
+.arrows-stub
+  height: 120px
+@media (max-width: 576px)
+  .main-home
+    height: 240px
+    min-height: auto
+    .main-full
+      padding-top: 30px
+
+    h2
+      display: none
+    h3
+      font-size: 10px
+      max-width: 220px
+      font-family: 'regular'
+      margin: 40px 0 15px
+      line-height: 1.3
+      text-transform: uppercase
+      p
+        margin: 0
+    h4
+      font-size: 11px
+      max-width: 220px
+      font-family: 'light'
+      line-height: 1.1
+      margin: 0 0 30px
+    .btn
+      font-size: 14px
+      padding: 4px 15px 3px
+      min-width: 105px
+  .tns-nav
+    display: block
+    text-align: left
+    top: auto
+    height: atuo
+    position: absolute
+    bottom: 15px
+    button
+      display: inline-block
+      width: 10px
+      height: 10px
+      font-size: 14px
+      padding: 0
+      margin: 0 4px
+      background-color: rgba($blueColor, 0.25)
+      border: 1px solid $blueColor, 0.25
+      &:after
+        position: relative
+        top: 1px
+        display: none
+
+    // display: none
+  .main-home .tns-item
+    background-position: left 0
+@media (max-height: 800px)

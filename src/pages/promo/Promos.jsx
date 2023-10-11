@@ -25,7 +25,7 @@ const Promos = () => {
     // item.binding.breeds_nurseries?
     getListing('promo').then(res => {
       let filterArrAnimal = [];
-      let filterArrPromo = [];
+      // let filterArrPromo = [];
       let filterArr = [];
 
       let allFilterArr = [];
