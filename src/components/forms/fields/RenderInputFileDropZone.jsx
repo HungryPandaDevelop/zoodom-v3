@@ -65,6 +65,7 @@ const TemplateFile = (props) => {
     let fileUrls = [];
 
     setLoadingFile(true);
+
     if (fileLength < 10) {
 
       acceptedFiles.map((file, index) => {
